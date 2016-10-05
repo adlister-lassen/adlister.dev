@@ -17,6 +17,8 @@ require_once (__DIR__ . '/../controllers/PageController.php');
 
 	<?php require $main_view; ?>
 
+	<?php require __DIR__.'/../views/partials/footer.php'; ?>
+
     <?php require __DIR__.'/../views/partials/common_js.php'; ?>
 </body>
 </html>
