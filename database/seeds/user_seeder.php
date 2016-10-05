@@ -29,3 +29,17 @@ $user->email = 'marceline@vampirequeen.com';
 $user->username = "marceline_abadeer";
 $user->password = $_ENV['USER_PASS'];
 $user->save();
+
+$user = new User;
+$user->name = 'Jack Straw';
+$user->email = 'jazz@hands.com';
+$user->username = "jazzy_hands";
+$user->password = $_ENV['USER_PASS'];
+$user->save();
+
+$user = new User;
+$user->name = 'Kade Lane';
+$user->email = 'kade@nexus.com';
+$user->username = "kade";
+$user->password = $_ENV['USER_PASS'];
+$user->save();

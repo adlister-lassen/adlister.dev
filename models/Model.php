@@ -1,5 +1,5 @@
 <?php
-
+//remove?? it's in bootstrap.php
 $_ENV = include __DIR__ . '/../.env.php';
 
 class Model {
