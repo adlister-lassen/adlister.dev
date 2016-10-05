@@ -82,7 +82,9 @@
 					<div class="bar background-dark-gray padding-horizontal margin-vertical">
                         <button type="button" class="features-buttons button btn btn-lg btn-template-transparent-primary">Save This Add</button>
                         <p style="margin-bottom:40px"></p>
-                        <button type="button" class="btn btn-lg btn-template-transparent-primary">Delete This Add</button>
+                        <a href="/ads"
+                        <button type="button" class="btn btn-lg btn-template-transparent-primary">Cancel</button>
+                        </a>
                     </div>
                 </div>
                 <!-- /.col-sm-3 -->

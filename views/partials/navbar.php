@@ -35,6 +35,16 @@
                                 <li>
                                     <a href="/signup">Signup</a>
                                 </li>
+            <!-- DISPLAY iff authorized user -->
+                                <li>
+                                    <a href="/users/account">Account</a>
+                                </li>
+                                <li>
+                                    <a href="/">Logout</a>
+                                </li>
+                                <li>
+                                    <a href="/ads/create">Create Ad</a>
+                                </li>
                             </ul>
                             <!-- ========== FULL WIDTH MEGAMENU END ================== -->
                         </div>
