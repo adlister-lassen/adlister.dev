@@ -7,13 +7,13 @@ $dbc->exec('DROP TABLE IF EXISTS ads');
 
 $query = 'CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    user-id INT NOT NULL,
+    user_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(1000) NOT NULL,
     price VARCHAR(100) NOT NULL,
-    image-url VARCHAR(255) NOT NULL,
+    image_url VARCHAR(255) NOT NULL,
     date_created VARCHAR(255) NOT NULL,
-    ad-views INT UNSIGNED,
+    ad_views INT UNSIGNED DEFAULT 0,
     PRIMARY KEY (id)
 )';
 
