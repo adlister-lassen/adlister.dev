@@ -1,6 +1,6 @@
 <div>
 
-    <section id="login">
+    <section id="signup">
 
         <div class="row">
 
@@ -36,7 +36,7 @@
                     <?php if (isset($_SESSION[ 'ERROR_MESSAGE'])) : ?>
                     <div class="alert alert-danger">
                         <p class="error">
-                            <?=$ _SESSION[ 'ERROR_MESSAGE']; ?>
+                            <?=$_SESSION[ 'ERROR_MESSAGE']; ?>
                         </p>
                     </div>
                     <?php unset($_SESSION[ 'ERROR_MESSAGE']); ?>
@@ -44,7 +44,7 @@
                     <?php if (isset($_SESSION[ 'SUCCESS_MESSAGE'])) : ?>
                     <div class="alert alert-success">
                         <p class="success">
-                            <?=$ _SESSION[ 'SUCCESS_MESSAGE']; ?>
+                            <?=$_SESSION[ 'SUCCESS_MESSAGE']; ?>
                         </p>
                     </div>
                     <?php unset($_SESSION[ 'SUCCESS_MESSAGE']); ?>
