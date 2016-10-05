@@ -36,7 +36,11 @@
                     <?php if (isset($_SESSION[ 'ERROR_MESSAGE'])) : ?>
                     <div class="alert alert-danger">
                         <p class="error">
+<<<<<<< HEAD
                             <?=$_SESSION[ 'ERROR_MESSAGE']; ?>
+=======
+                            <?= $_SESSION[ 'ERROR_MESSAGE']; ?>
+>>>>>>> master
                         </p>
                     </div>
                     <?php unset($_SESSION[ 'ERROR_MESSAGE']); ?>
@@ -44,7 +48,11 @@
                     <?php if (isset($_SESSION[ 'SUCCESS_MESSAGE'])) : ?>
                     <div class="alert alert-success">
                         <p class="success">
+<<<<<<< HEAD
                             <?=$_SESSION[ 'SUCCESS_MESSAGE']; ?>
+=======
+                            <?= $_SESSION[ 'SUCCESS_MESSAGE']; ?>
+>>>>>>> master
                         </p>
                     </div>
                     <?php unset($_SESSION[ 'SUCCESS_MESSAGE']); ?>
