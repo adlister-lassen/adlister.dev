@@ -1,56 +1,87 @@
-<div class="container">
+<div>
 
-	<section id="login">
+    <section id="login">
 
-		<div class="row">
+        <div class="row">
 
-			<h1 class="section-title">Signup For OooLister</h1>
+            <div id="heading-breadcrumbs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h1>Signup</h1>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Home</a>
+                                </li>
+                                <li>Signup</li>
+                            </ul>
 
-			<div class="col-md-6 col-md-offset-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-				<p>Please fill out the information below so we can create your account.</p>
-				<?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>
-	                <div class="alert alert-danger">
-	                    <p class="error"><?= $_SESSION['ERROR_MESSAGE']; ?></p>
-	                </div>
-	                <?php unset($_SESSION['ERROR_MESSAGE']); ?>
-	            <?php endif; ?>
-	            <?php if (isset($_SESSION['SUCCESS_MESSAGE'])) : ?>
-	                <div class="alert alert-success">
-	                    <p class="success"><?= $_SESSION['SUCCESS_MESSAGE']; ?></p>
-	                </div>
-	                <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
-	            <?php endif; ?>
+            <div class="container">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="box">
+                        <center>
+                            <h2 class="text-uppercase">Create new account</h2>
+                        </center>
+                    </div>
 
-				<form method="POST" action="" data-validation data-required-message="This field is required">
 
-					<div class="form-group">
-					    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" data-required>
-					</div>
-					<div class="form-group">
-					    <input type="text" class="form-control" id="email" name="email" placeholder="Email" data-required>
-					</div>
-					<div class="form-group">
-					    <input type="text" class="form-control" id="username" name="username" placeholder="Username" data-required>
-					</div>
-					<div class="form-group">
-					    <input type="password" class="form-control" id="password" name="password" placeholder="Password" data-required>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<button type="submit" class="btn btn-primary">Signup</button>
-						</div>
-						<div class="col-sm-6 text-right">
-							<a href="/login" class="btn btn-success">Go To Login</a>
-						</div>
-					</div>
 
-				</form>
 
-			</div>
+                    <?php if (isset($_SESSION[ 'ERROR_MESSAGE'])) : ?>
+                    <div class="alert alert-danger">
+                        <p class="error">
+                            <?=$ _SESSION[ 'ERROR_MESSAGE']; ?>
+                        </p>
+                    </div>
+                    <?php unset($_SESSION[ 'ERROR_MESSAGE']); ?>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION[ 'SUCCESS_MESSAGE'])) : ?>
+                    <div class="alert alert-success">
+                        <p class="success">
+                            <?=$ _SESSION[ 'SUCCESS_MESSAGE']; ?>
+                        </p>
+                    </div>
+                    <?php unset($_SESSION[ 'SUCCESS_MESSAGE']); ?>
+                    <?php endif; ?>
 
-		</div>
+                   
 
-	</section>
+                   <form method="POST" action="" data-validation data-required-message="This field is required">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name-login" name="name" placeholder="Full Name" data-required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email-login" name="email" placeholder="Email" data-required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username-login" name="username" placeholder="Username" data-required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password-login" name="password" placeholder="Password" data-required>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Register</button>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <button type="button" href="adlister.dev/login" class="btn"><i class="fa fa-sign-in"></i>Go To Login</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
 
 </div>
