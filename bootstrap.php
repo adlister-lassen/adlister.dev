@@ -1,7 +1,13 @@
 <?php
 
+//database connection
+$_ENV = include __DIR__ . '/../../.env.php';
+require_once __DIR__ . '/databases/db_connect.php';
+
 // require models
+require_once __DIR__ . '/models/Model.php';
 require_once __DIR__ . '/models/User.php';
+// require_once __DIR__ . '/models/Ad.php';
 
 
 // require helper classes
