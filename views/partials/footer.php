@@ -22,32 +22,32 @@
                     <div class="photostream">
                         <div>
                             <a href="#">
-                                <img src="/img/horn-speaker.png" class="img-responsive" alt="#">
+                                <img src="/img/uploads/horn-speaker.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="/img/bacon-flavored-toothpaste.png" class="img-responsive" alt="#">
+                                <img src="/img/uploads/bacon-flavored-toothpaste.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="/img/breakfast-maker.png" class="img-responsive" alt="#">
+                                <img src="/img/uploads/breakfast-maker.png" class="img-responsive" alt="#">
                             </a>    
                         </div>
                         <div>
                             <a href="#">
-                                <img src="/img/cupcake-floww.png" class="img-responsive" alt="#">
+                                <img src="/img/uploads/cupcake-floww.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="/img/disco-ball-helmet.png" class="img-responsive" alt="#">
+                                <img src="/img/uploads/disco-ball-helmet.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="/img/lobster-case.png" class="img-responsive" alt="#">
+                                <img src="/img/uploads/lobster-case.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                     </div>
