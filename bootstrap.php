@@ -8,7 +8,7 @@ require_once __DIR__ . '/database/db_connect.php';
 // require models
 require_once __DIR__ . '/models/Model.php';
 require_once __DIR__ . '/models/User.php';
-// require_once __DIR__ . '/models/Ad.php';
+require_once __DIR__ . '/models/Ad.php';
 
 
 // require helper classes
