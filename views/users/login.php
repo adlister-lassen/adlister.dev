@@ -23,7 +23,7 @@
             </div>
 
             <div class="container">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-6 col-md-offset-3">
                     <div class="box">
                         <center>
                             <h2 class="text-uppercase">Login</h2>
