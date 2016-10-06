@@ -51,10 +51,10 @@ function pageController()
         case '/signup':
             $main_view = __DIR__.'/../views/users/signup.php';
             break;
-        case 'users/account':
+        case '/users/account':
             $main_view = __DIR__.'/../views/users/account.php';
             break;
-        case 'users/account/update':
+        case '/users/edit':
             $main_view = __DIR__.'/../views/users/edit.php';
             break;
         default:    // displays 404 if route not specified above
