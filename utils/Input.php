@@ -22,7 +22,7 @@ class Input
     public static function get($key, $default = null)
     {
         if(isset($_REQUEST[$key])) {
-            return htmlspecialchars(strip_tags($_REQUEST[$key]));
+            return $_REQUEST[$key];
         } else {
             return $default;
         }
@@ -97,8 +97,5 @@ class Input
     // later in the curriculum.                                              //
     ///////////////////////////////////////////////////////////////////////////
     private function __construct() {}
-
-
-
 
 }
