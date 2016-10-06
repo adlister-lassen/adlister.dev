@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+
+<!--
+-
+- Sequel Pro XML dump
+- Version 4541
+-
+- http://www.sequelpro.com/
+- https://github.com/sequelpro/sequelpro
+-
+- Host: 127.0.0.1 (MySQL 5.5.47-0ubuntu0.14.04.1-log)
+- Database: adlister_db
+- Generation Time Time: 2016-10-06 14:54:55 +0000
+-
+-->
+
+<resultset statement="SELECT * FROM `ads` LIMIT 0,1000" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<row>
+		<field name="id">1</field>
+		<field name="user_id">1</field>
+		<field name="name">Bacon Bandages</field>
+		<field name="description">Bacon Bandages will treat your minor cuts, scrapes and scratches with the incredible healing power of meat. (At least that's what the Bacon Council tells us.) There are 15 bandages that look so much like tiny slabs of bacon you'll have to hold yourself back from ripping them off and eating them. No really, please don't eat them, that's unhygienic and gross. </field>
+		<field name="price">6.99</field>
+		<field name="image_url">/img/uploads/bacon_bandage.png</field>
+		<field name="date_created">5/10/2016</field>
+		<field name="ad_views">10</field>
+	</row>
+
+	<row>
+		<field name="id">2</field>
+		<field name="user_id">2</field>
+		<field name="name">Pet Sweep</field>
+		<field name="description">The Pet Sweep animal powered debris removal system fro Fido or Muffin or the Pet Petter, the easiest way to spend quality time with your pet without spending time with your pet. Boxes are all, naturally, empty. </field>
+		<field name="price">5.95</field>
+		<field name="image_url">/img/uploads/pet_sweep.png</field>
+		<field name="date_created">9/23/2016</field>
+		<field name="ad_views">15</field>
+	</row>
+
+	<row>
+		<field name="id">3</field>
+		<field name="user_id">3</field>
+		<field name="name">Keyboard Waffle Iron</field>
+		<field name="description">Enjoy a breakfast that's Control-Alt-Delicious with this geek-chic waffle iron by Chris Dimino. Made from die-cast aluminum and featuring bake-lite heat resistant handles, this design can be put on the grill or even gas or electric stovetops, letting you enjoy gourmet Belgian-style waffles whether you're camping, tailgating, or simply brunching at home--a perfect way to encourage playing with your food, no matter what your typing speed.</field>
+		<field name="price">69.99</field>
+		<field name="image_url">/img/uploads/keyboard_waffle.png</field>
+		<field name="date_created">7/15/2016</field>
+		<field name="ad_views">9</field>
+	</row>
+
+	<row>
+		<field name="id">4</field>
+		<field name="user_id">4</field>
+		<field name="name">3 in 1 Breakfast Maker</field>
+		<field name="description">Elite Cuisine 3-in-1 Breakfast Station 4-Cup Coffee Maker
+3 in 1 toaster oven, coffee maker and griddle
+4-Cup coffee maker
+1-Slice toaster oven
+6-Inch griddle
+500-Watt of power</field>
+		<field name="price">35.99</field>
+		<field name="image_url">/img/uploads/breakfast-maker.png</field>
+		<field name="date_created">8/2/2016</field>
+		<field name="ad_views">14</field>
+	</row>
+
+	<row>
+		<field name="id">5</field>
+		<field name="user_id">5</field>
+		<field name="name">The Ab Hancer</field>
+		<field name="description">The Ab Hancer will be your choice of six-pack defining tools this summer.
+It is light weight, is easy to hide under clothing, and dramatically enhances your abs!</field>
+		<field name="price">24.95</field>
+		<field name="image_url">/img/uploads/ab-hancer.png</field>
+		<field name="date_created">7/26/2016</field>
+		<field name="ad_views">22</field>
+	</row>
+
+	<row>
+		<field name="id">6</field>
+		<field name="user_id">6</field>
+		<field name="name">Bacon Toothpaste</field>
+		<field name="description">Great gag/novelty gift.
+Each tube contains 2.5 oz (70 g) of potent BACON paste.</field>
+		<field name="price">5.00</field>
+		<field name="image_url">/img/uploads/bacon-flavored-toothpaste.png</field>
+		<field name="date_created">6/5/2016</field>
+		<field name="ad_views">34</field>
+	</row>
+
+	<row>
+		<field name="id">7</field>
+		<field name="user_id">6</field>
+		<field name="name">The Amazing Banana Slicer</field>
+		<field name="description">Faster, safer than using a knife
+Great for cereal
+Plastic, dishwasher safe
+Slice your banana with one quick motion
+Kids love slicing their own bananas
+“What can I say about the 571B Banana Slicer that hasn’t already been said about the
+wheel, penicillin, or the iPhone…. this is one of the greatest inventions of all time…”</field>
+		<field name="price">9.99</field>
+		<field name="image_url">/img/uploads/banana-slicer.png</field>
+		<field name="date_created">10/3/2016</field>
+		<field name="ad_views">4</field>
+	</row>
+
+	<row>
+		<field name="id">8</field>
+		<field name="user_id">5</field>
+		<field name="name">Baseball Bat Pepper Grinder</field>
+		<field name="description">Jr. size ideal for picnics, camping or for the assistant grill master
+Actual size is 19 inches long
+Perfect for BBQ’s
+superior stainless steel pepper-grinding mechanism
+Designed and manufactured in England</field>
+		<field name="price">14.50</field>
+		<field name="image_url">/img/uploads/baseball-bat-pepper-grinder.png</field>
+		<field name="date_created">9/9/2016</field>
+		<field name="ad_views">19</field>
+	</row>
+
+	<row>
+		<field name="id">9</field>
+		<field name="user_id">4</field>
+		<field name="name">Cupcake Flavored Floss</field>
+		<field name="description">Make flossing fun! What a novel(ty) idea! – Makes a great, wacky gift!
+Turn a boring nightly routine into a party in your mouth with Cupcake Floss!
+Be careful though, the delicious frosting flavor might turn you into a flossaholic!
+Each 2 1/2-inches tall plastic dispenser contains 27.3 yards (982.8 inches) of waxed floss.</field>
+		<field name="price">3.75</field>
+		<field name="image_url">/img/uploads/cupcake-floww.png</field>
+		<field name="date_created">5/29/2016</field>
+		<field name="ad_views">13</field>
+	</row>
+
+	<row>
+		<field name="id">10</field>
+		<field name="user_id">3</field>
+		<field name="name">The Defibrillator Toaster</field>
+		<field name="description">It’s about time someone came up with a fresh take on the vital machine
+that warms our bread every morning, the Defibrillator Toaster.</field>
+		<field name="price">19.99</field>
+		<field name="image_url">/img/uploads/toaster.png</field>
+		<field name="date_created">6/27/2016</field>
+		<field name="ad_views">46</field>
+	</row>
+
+	<row>
+		<field name="id">11</field>
+		<field name="user_id">2</field>
+		<field name="name">The Disco Helmet</field>
+		<field name="description">Vintage-style 3/4 Open Face Helmet
+Liner with detail stitching and contrasting ventilated panels in the top
+Embossed goggle strap
+Vintage style chrome strip
+Helmets are non-DOT approved and meant for novelty purposes only</field>
+		<field name="price">75.00</field>
+		<field name="image_url">/img/uploads/disco-ball-helmet.png</field>
+		<field name="date_created">3/1/2016</field>
+		<field name="ad_views">27</field>
+	</row>
+
+	<row>
+		<field name="id">12</field>
+		<field name="user_id">1</field>
+		<field name="name">Emergency Moustache Kit</field>
+		<field name="description">Emergency moustaches to instantly become a man
+Styles include traditional gent, cowboy, rusty brush, italian plumber, oil baron and abra-kadabra
+Individually sealed for extra freshness
+Stash your tash for emergency situations
+Set of 6 self adhesive mustaches in assorted styles</field>
+		<field name="price">8.15</field>
+		<field name="image_url">/img/uploads/moustaches.png</field>
+		<field name="date_created">3/3/2016</field>
+		<field name="ad_views">31</field>
+	</row>
+
+	<row>
+		<field name="id">13</field>
+		<field name="user_id">1</field>
+		<field name="name">Escape Preventing Dog Harness</field>
+		<field name="description">Patented harness that prevents puppies or small adult dogs from escaping fenced-in areas.
+The device slips on a dog like a common harness, but its integrated rigid 10 1/2″-long cross-bar spans
+well beyond the width of the pet, preventing it from slipping out between fence railings.</field>
+		<field name="price">29.95</field>
+		<field name="image_url">/img/uploads/dog-harness.png</field>
+		<field name="date_created">3/9/2016</field>
+		<field name="ad_views">44</field>
+	</row>
+
+	<row>
+		<field name="id">14</field>
+		<field name="user_id">2</field>
+		<field name="name">The Facebook Shower Curtain</field>
+		<field name="description">Bring your profile to life in the bathroom
+Transparent section so you can create a profile
+Perfect for the social networker in your life
+Water resistant
+Measures 70&quot; by 70&quot;</field>
+		<field name="price">13.99</field>
+		<field name="image_url">/img/uploads/facebook-shower-curtain.png</field>
+		<field name="date_created">3/13/2016</field>
+		<field name="ad_views">7</field>
+	</row>
+
+	<row>
+		<field name="id">15</field>
+		<field name="user_id">3</field>
+		<field name="name">Flowbee Haircut Machine</field>
+		<field name="description">Flowbee Haircutting System Money-saver for the entire family and even works on pets!
+Over a million satisfied customers have used it for years.
+Provides a precise haircut every time.
+Flowbee System attaches to a vacuum cleaner (not included, needs to
+be 3 hp or 8 amps to pull hair through the cutting blades.)</field>
+		<field name="price">124.99</field>
+		<field name="image_url">/img/uploads/flowbee.png</field>
+		<field name="date_created">4/2/2016</field>
+		<field name="ad_views">13</field>
+	</row>
+
+	<row>
+		<field name="id">16</field>
+		<field name="user_id">4</field>
+		<field name="name">Glow In The Dark Toilet Paper</field>
+		<field name="description">Toilet paper roll has a glow-in-the-dark coating.
+Novelty item, not intended for “actual” use.
+If used your rear may glow.</field>
+		<field name="price">8.56</field>
+		<field name="image_url">/img/uploads/glowing-toilet-paper.png</field>
+		<field name="date_created">4/4/2016</field>
+		<field name="ad_views">21</field>
+	</row>
+
+	<row>
+		<field name="id">17</field>
+		<field name="user_id">5</field>
+		<field name="name">iPhone Case With Built-In Cup Holder</field>
+		<field name="description">The Uppercup aims to be one of the first cup holders for the iPhone.
+A creation from Natwerk it is called the Uppercup.
+It is an iPhone case with a built-in cup holder to hold your beverage.</field>
+		<field name="price">11.00</field>
+		<field name="image_url">/img/uploads/iphone-cupholder.png</field>
+		<field name="date_created">4/8/2016</field>
+		<field name="ad_views">17</field>
+	</row>
+
+	<row>
+		<field name="id">18</field>
+		<field name="user_id">6</field>
+		<field name="name">iPhone Giant Horn Speaker</field>
+		<field name="description">The non-powered horn is held up by a hand-carved
+natural wood stand, and is handmade out of ceramic.
+The docking area at the top of the horn is compatible with the original
+iPhone, iPhone 3G, iPhone 3GS, iPhone 4, iPhone 4S, and iPod touch.</field>
+		<field name="price">22.95</field>
+		<field name="image_url">/img/uploads/horn-speaker.png</field>
+		<field name="date_created">5/5/2016</field>
+		<field name="ad_views">26</field>
+	</row>
+
+	<row>
+		<field name="id">19</field>
+		<field name="user_id">6</field>
+		<field name="name">The Lobster iPhone Case</field>
+		<field name="description">The red Lobster Mobile Telephone Case is a modern appropriation of Salvador
+Dali’s Lobster Telephone (Aphrodisiac telephone), created in 1938.</field>
+		<field name="price">20.00</field>
+		<field name="image_url">/img/uploads/lobster-case.png</field>
+		<field name="date_created">5/10/2016</field>
+		<field name="ad_views">32</field>
+	</row>
+
+	<row>
+		<field name="id">20</field>
+		<field name="user_id">5</field>
+		<field name="name">The Noodle Cooling Fan with Chopsticks</field>
+		<field name="description">Frantic blowing is both undignified and limited in its effectiveness.
+The Automated Noddle Cooler is the answer.
+A compact fan, it fits tidily towards the holding end of one of a pair of chopsticks.</field>
+		<field name="price">10.50</field>
+		<field name="image_url">/img/uploads/noodle-cooling-fan.png</field>
+		<field name="date_created">5/25/2016</field>
+		<field name="ad_views">11</field>
+	</row>
+
+	<row>
+		<field name="id">21</field>
+		<field name="user_id">4</field>
+		<field name="name">Giant Nose Shower Soap Dispenser</field>
+		<field name="description">The Nose Shower Gel Dispenser is a wacky, gross addition to any bathroom or shower stall.</field>
+		<field name="price">14.99</field>
+		<field name="image_url">/img/uploads/nose-soap-dispenser.png</field>
+		<field name="date_created">6/6/2016</field>
+		<field name="ad_views">49</field>
+	</row>
+
+	<row>
+		<field name="id">22</field>
+		<field name="user_id">3</field>
+		<field name="name">Pancake Maker Conveyor Belt</field>
+		<field name="description">The best part about this machine is that it’s all automated.
+Pour in the fat free batter and hit the button and out come the hotcakes.
+If you had one of these and were selling pancakes, they’d sell like hotcakes.
+The Chefstack Pancake Maker can be yours if you have $3500 lying around.</field>
+		<field name="price">159.95</field>
+		<field name="image_url">/img/uploads/pancake-conveyor-belt.png</field>
+		<field name="date_created">6/16/2016</field>
+		<field name="ad_views">30</field>
+	</row>
+
+	<row>
+		<field name="id">23</field>
+		<field name="user_id">2</field>
+		<field name="name">Picnic Pants</field>
+		<field name="description">Innovative pants designed by Italian company transform into a
+useful picnic table when a person sits in a cross-legged position.</field>
+		<field name="price">44.99</field>
+		<field name="image_url">/img/uploads/picnic-pants.png</field>
+		<field name="date_created">6/26/2016</field>
+		<field name="ad_views">16</field>
+	</row>
+
+	<row>
+		<field name="id">24</field>
+		<field name="user_id">1</field>
+		<field name="name">Shoe Umbrella Kit</field>
+		<field name="description">Don’t let the weather ruin your shoes again.
+This Umbrella Shoe Saver invention will extend the life of your
+expensive footwear by attaching little umbrellas to your feet.</field>
+		<field name="price">8.97</field>
+		<field name="image_url">/img/uploads/shoe-umbrellas.png</field>
+		<field name="date_created">7/7/2016</field>
+		<field name="ad_views">3</field>
+	</row>
+
+	<row>
+		<field name="id">25</field>
+		<field name="user_id">1</field>
+		<field name="name">Twirling Spaghetti Fork</field>
+		<field name="description">Twirling is a better way to eat spaghetti and the motorized fork
+automatically winds up the pasta on the end of the fork.</field>
+		<field name="price">11.97</field>
+		<field name="image_url">/img/uploads/spaghetti-fork.png</field>
+		<field name="date_created">7/17/2016</field>
+		<field name="ad_views">25</field>
+	</row>
+
+	<row>
+		<field name="id">26</field>
+		<field name="user_id">2</field>
+		<field name="name">The Wizard of Oz Bookmark</field>
+		<field name="description">Clever and striking. The Wicked Witch’s poor sister’s legs stick out from the
+book, perfectly marking your page. That’s right: your book is Dorothy’s house.</field>
+		<field name="price">10.00</field>
+		<field name="image_url">/img/uploads/wizard-bookmark.png</field>
+		<field name="date_created">7/27/2016</field>
+		<field name="ad_views">19</field>
+	</row>
+
+	<row>
+		<field name="id">27</field>
+		<field name="user_id">3</field>
+		<field name="name">Testamints</field>
+		<field name="description">Testamints Spearmint Gum is an easy way to share your faith with a simple piece of gum.
+Each package of gum contains 12 pieces of gum, and has a verse from God’s Word printed on the back.</field>
+		<field name="price">17.99</field>
+		<field name="image_url">/img/uploads/testamints.png</field>
+		<field name="date_created">8/8/2016</field>
+		<field name="ad_views">38</field>
+	</row>
+
+</resultset>
