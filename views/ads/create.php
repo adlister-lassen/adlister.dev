@@ -8,7 +8,7 @@
                 <div class="col-md-7">
 					<form method="POST" id="createAd" action="" data-validation data-required-message="This field is required">
                 		<div class="form-group">
-						    <input type="text" class="form-control" id="productName" name="productName" placeholder="Product Name" data-required>
+						    <input type="text" class="form-control" id="name" name="name" placeholder="Product Name" data-required>
 						</div>
 					</form>
                 </div>
