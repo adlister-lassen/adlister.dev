@@ -128,3 +128,54 @@ function findAdOrRedirect()
 
     return $ad;
 }
+
+
+function getNumberOfAds($dbc)
+{
+    $stmt = $dbc->query('SELECT COUNT(*) FROM ads;');
+    return $stmt->fetchColumn();
+}
+
+function getMaxPageNumber($dbc,$limit)
+{
+    $number_of_ads = getNumberOfAds($dbc);
+    return ceil($number_of_ads / $limit);
+}
+
+function calculateOffset($page_number,$limit)
+{
+    return (($limit * $page_number) - $limit);
+}
+
+function getAds($dbc, $page_number,$limit)
+{
+
+    $ads_query = 'SELECT * FROM ads LIMIT :limit OFFSET :offset;';
+
+    $offset = calculateOffset($page_number, $limit);
+
+    $stmt = $dbc->prepare($ads_query);
+    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+        
+
+function getPageNumber($max_page_number)
+{
+    $page_number = Input::getNumber('page', 1);
+    if ($page_number > $max_page_number) {
+        $page_number = $max_page_number;
+    } else if ($page_number < 1) {
+        $page_number = 1;
+    }
+
+    return $page_number;
+}
+
+
+
+
+
