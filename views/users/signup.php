@@ -79,7 +79,7 @@
                                 <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Register</button>
                             </div>
                             <div class="col-sm-6 text-right">
-                                <button type="button" href="adlister.dev/login" class="btn"><i class="fa fa-sign-in"></i>Go To Login</button>
+                                <a type="button" href="/login" class="btn"><i class="fa fa-sign-in"></i>Go To Login</a>
                             </div>
                         </div>
 
