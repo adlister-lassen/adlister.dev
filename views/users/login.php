@@ -61,13 +61,13 @@
                         <div class="row">
                             <div class="col-sm-6">
                                  <button type="submit" class="btn btn-template-main"><i class="fa fa-sign-in"></i>Login</button>
-                            </div>
+                            </div> </form>
                             <div class="col-sm-6 text-right">
-                                <button type="button" href="adlister.dev/signup" class="btn"><i class="fa fa-user-md"></i>Go To Signup</button>
+                                <a type="button" href="/signup" class="btn"><i class="fa fa-user-md"></i>Go To Signup</a>
                             </div>
                         </div>
 
-                    </form>
+                   
 
                 </div>
 
