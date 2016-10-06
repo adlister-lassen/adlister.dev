@@ -82,7 +82,7 @@
                             <div class="col-sm-4">
                                 <div class="box-image">
                                     <div class="image">
-                                        <img src="img/bacon-bandages.png" alt="" class="img-responsive">
+                                        <img src="img/uploads/bacon-bandage.png" alt="" class="img-responsive">
                                     </div>
                                     <div class="bg"></div>
                                     <div class="name">
@@ -101,7 +101,7 @@
                             <div class="col-sm-4">
                                 <div class="box-image">
                                     <div class="image">
-                                        <img src="img/pet-sweep.png" alt="" class="img-responsive">
+                                        <img src="img/uploads/pet-sweep.png" alt="" class="img-responsive">
                                     </div>
                                     <div class="bg"></div>
                                     <div class="name">
@@ -120,7 +120,7 @@
                             <div class="col-sm-4">
                                 <div class="box-image">
                                     <div class="image">
-                                        <img src="img/keyboard-waffle-iron.png" alt="" class="img-responsive">
+                                        <img src="img/uploads/keyboard-waffle.png" alt="" class="img-responsive">
                                     </div>
                                     <div class="bg"></div>
                                     <div class="name">
