@@ -26,8 +26,8 @@
             <p class="text-muted lead text-center">You'll gag on these.</p>
 
             <div class="row products">
-                <?php foreach($adsToDisplay->attributes as $adArray): ?>
-                    <div class="col-md-4 col-sm-4">
+                <?php foreach($adsToDisplay as $adArray): ?>
+                    <div class="col-md-4   col-sm-4" >
                         <div class="product">
                             <div class="image">
                                 <a href="/ads/show?id=<?=$adArray['id'];?>">
@@ -54,19 +54,18 @@
                 <div class="pages">
 
                     <ul class="pagination">
-                        <li><a href="#">&laquo;</a>
+                        <li>
+                          <a href="/ads?page=<?= $page-1; ?>" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
                         </li>
-                        <li class="active"><a href="#">1</a>
-                        </li>
-                        <li><a href="#">2</a>
-                        </li>
-                        <li><a href="#">3</a>
-                        </li>
-                        <li><a href="#">4</a>
-                        </li>
-                        <li><a href="#">5</a>
-                        </li>
-                        <li><a href="#">&raquo;</a>
+                            <?php for ($i=1; $i <= $max_page; $i++): ?>
+                                <li><a href="/ads?page=<?= $i; ?>"><?= $i; ?></a></li>
+                            <?php endfor; ?>
+                        <li>
+                            <a href="/ads?page=<?= $page+1; ?>" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
