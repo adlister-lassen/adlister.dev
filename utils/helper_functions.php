@@ -117,3 +117,14 @@ var_dump($errors);
     return $errors;
 
 } 
+
+function findAdOrRedirect()
+{
+    $ad = Ad::find(Input::get('id'));
+    if ($ad == null) {
+        header('Location: /ads');
+        die();
+    }
+
+    return $ad;
+}

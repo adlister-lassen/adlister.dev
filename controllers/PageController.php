@@ -38,9 +38,11 @@ function pageController($dbc)
             $main_view = __DIR__.'/../views/ads/create.php';
             break;
         case '/ads/show':
+            $data['ad'] = findAdOrRedirect();
             $main_view = __DIR__.'/../views/ads/show.php';
             break;
         case '/ads/edit':
+            $data['ad'] = findAdOrRedirect();
             $main_view = __DIR__.'/../views/ads/edit.php';
             break;
 
@@ -62,20 +64,27 @@ function pageController($dbc)
             break;
 
     }
+
+    $limit = 8;
     //create Ad 
     $errors = createAd($dbc);
+    $adsToDisplay = Ad::all();
     $submitted = isset($_GET['submitted']) ? true : false;
 
-    $data = [
-    'main_view' => $main_view,
+
+
+    $data['submitted'] = $submitted;
+    $data['errors'] = $errors;
+    $data['adsToDisplay'] = $adsToDisplay;
     // 'page' => $page_number,
     // 'max_page' => $max_page_number,
-    'submitted' => $submitted,
-    'errors' => $errors,
-    ];
+
+    
+    $data['main_view'] = $main_view;
 
 
     return $data;
 }
 
 extract(pageController($dbc));
+var_dump($adsToDisplay);
