@@ -3,43 +3,43 @@
 require_once __DIR__ . '/../../models/User.php';
 
 $user = new User;
-$user->name = 'Finn Mertens';
-$user->email = 'finn@fansofbilly.com';
-$user->username = "finn_the_human";
+$user->name = 'Bob Bobberson';
+$user->email = 'bob@mail.com';
+$user->username = "bob";
 $user->password = $_ENV['USER_PASS'];
 $user->save();
 
 $user = new User;
-$user->name = 'Jake';
-$user->email = 'jake@fansofbilly.com';
-$user->username = "jake_the_dog";
+$user->name = 'Beth Betherson';
+$user->email = 'amy@mail.com';
+$user->username = "beth";
 $user->password = $_ENV['USER_PASS'];
 $user->save();
 
 $user = new User;
-$user->name = 'Simon Petrikov';
-$user->email = 'iceking@princessaholicanonymous.com';
-$user->username = "ice_king";
+$user->name = 'John Johnson';
+$user->email = 'john@mail.com';
+$user->username = "john";
 $user->password = $_ENV['USER_PASS'];
 $user->save();
 
 $user = new User;
-$user->name = 'Marceline Abadeer';
-$user->email = 'marceline@vampirequeen.com';
-$user->username = "marceline_abadeer";
+$user->name = 'Jane Janison';
+$user->email = 'jane@mail.com';
+$user->username = "jane";
 $user->password = $_ENV['USER_PASS'];
 $user->save();
 
 $user = new User;
-$user->name = 'Jack Straw';
-$user->email = 'jazz@hands.com';
-$user->username = "jazzy_hands";
+$user->name = 'Stan Stanley';
+$user->email = 'stan@mail.com';
+$user->username = 'stan';
 $user->password = $_ENV['USER_PASS'];
 $user->save();
 
 $user = new User;
-$user->name = 'Kade Lane';
-$user->email = 'kade@nexus.com';
-$user->username = "kade";
+$user->name = 'Sarah Sarason';
+$user->email = 'sarah@mail.com';
+$user->username = 'sarah';
 $user->password = $_ENV['USER_PASS'];
 $user->save();
