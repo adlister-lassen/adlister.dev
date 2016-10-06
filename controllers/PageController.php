@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../utils/helper_functions.php';
 
-function pageController()
+function pageController($dbc)
 {
 
     // defines array to be returned and extracted for view
@@ -54,7 +54,9 @@ function pageController()
         case '/users/account':
             $main_view = __DIR__.'/../views/users/account.php';
             break;
+
         case '/users/edit':
+
             $main_view = __DIR__.'/../views/users/edit.php';
             break;
         default:    // displays 404 if route not specified above
@@ -62,10 +64,20 @@ function pageController()
             break;
 
     }
+    //create Ad 
+    $errors = createAd($dbc);
+    $submitted = isset($_GET['submitted']) ? true : false;
 
-    $data['main_view'] = $main_view;
+    $data = [
+    'main_view' => $main_view,
+    // 'page' => $page_number,
+    // 'max_page' => $max_page_number,
+    'submitted' => $submitted,
+    'errors' => $errors,
+    ];
+
 
     return $data;
 }
 
-extract(pageController());
+extract(pageController($dbc));
