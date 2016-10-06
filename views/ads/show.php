@@ -84,10 +84,10 @@
                     <!-- /.bar -->
                     <div class="bar background-dark-gray padding-horizontal margin-vertical">
                         <a href="/ads/edit">
-                        <button type="button" class="features-buttons button btn btn-lg btn-template-transparent-primary">edit this add</button>
+                        <button type="button" class="features-buttons button btn btn-lg btn-template-transparent-primary">edit this ad</button>
                         </a>
                         <p style="margin-bottom:40px"></p>
-                        <button type="button" class="btn btn-lg btn-template-transparent-primary">Delete This Add</button>
+                        <button type="button" class="btn btn-lg btn-template-transparent-primary">Delete This Ad</button>
                     </div>
                 </div>
                 <!-- /.col-md-3 -->

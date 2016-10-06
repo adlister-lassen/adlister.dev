@@ -23,221 +23,31 @@
 <!-- ==== Page contents ===== -->
     <div id="content">
         <div class="container">
-            <p class="text-muted lead text-center">In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide. Pellentesque habitant morbi tristique senectus et netuss.</p>
+            <p class="text-muted lead text-center">You'll gag on these.</p>
 
             <div class="row products">
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="../img/product1.jpg" alt="" class="img-responsive image1">
-                            </a>
+                <?php foreach($adsToDisplay->attributes as $adArray): ?>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="/ads/show?id=<?=$adArray['id'];?>">
+                                    <img src="<?=$adArray['image_url'];?>" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="/ads/show?id=<?=$adArray['id'];?>"</a><?=$adArray['name'];?></h3>
+                                <p class="price">$<?=$adArray['price'];?></p>
+                                <p class="buttons">
+                                    <a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-default">View detail</a>
+                                </p>
+                            </div>
+                            <!-- /.text -->
                         </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">Fur coat with very but very very long name</a></h3>
-                            <p class="price">$143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-                        </div>
-                        <!-- /.text -->
+                        <!-- /.product -->
                     </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product2.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">White Blouse Armani</a></h3>
-                            <p class="price"><del>$280</del> $143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-                        </div>
-                        <!-- /.text -->
-
-                        <div class="ribbon sale">
-                            <div class="theribbon">SALE</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
-
-                        <div class="ribbon new">
-                            <div class="theribbon">NEW</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product3.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">Black Blouse Versace</a></h3>
-                            <p class="price">$143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-
-                        </div>
-                        <!-- /.text -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product4.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">Black Blouse Versace</a></h3>
-                            <p class="price">$143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-
-                        </div>
-                        <!-- /.text -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product3.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">White Blouse Armani</a></h3>
-                            <p class="price"><del>$280</del> $143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-                        </div>
-                        <!-- /.text -->
-
-                        <div class="ribbon sale">
-                            <div class="theribbon">SALE</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
-
-                        <div class="ribbon new">
-                            <div class="theribbon">NEW</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product4.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">White Blouse Versace</a></h3>
-                            <p class="price">$143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-
-                        </div>
-                        <!-- /.text -->
-
-                        <div class="ribbon new">
-                            <div class="theribbon">NEW</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product2.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">White Blouse Versace</a></h3>
-                            <p class="price">$143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-
-                        </div>
-                        <!-- /.text -->
-
-                        <div class="ribbon new">
-                            <div class="theribbon">NEW</div>
-                            <div class="ribbon-background"></div>
-                        </div>
-                        <!-- /.ribbon -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="product">
-                        <div class="image">
-                            <a href="/ads/show">
-                                <img src="img/product1.jpg" alt="" class="img-responsive image1">
-                            </a>
-                        </div>
-                        <!-- /.image -->
-                        <div class="text">
-                            <h3><a href="/ads/show">Fur coat</a></h3>
-                            <p class="price">$143.00</p>
-                            <p class="buttons">
-                                <a href="/ads/show" class="btn btn-default">View detail</a>
-                                <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </p>
-
-                        </div>
-                        <!-- /.text -->
-                    </div>
-                    <!-- /.product -->
-                </div>
-                <!-- /.col-md-4 -->
-            </div>
-            <!-- /.products -->
+                <?php endforeach; ?>
+            <!-- /end of products -->
 
             <div class="col-sm-12">
 
