@@ -26,28 +26,26 @@
             <p class="text-muted lead text-center">You'll gag on these.</p>
 
             <div class="row products">
-                <?php foreach($adsToDisplay as $adArray): ?>
-                    <?php foreach ($adArray as $ad) : ?>
-                    <div class="col-md-3 col-sm-4">
+                <?php foreach($adsToDisplay->attributes as $adArray): ?>
+                    <div class="col-md-4 col-sm-4">
                         <div class="product">
                             <div class="image">
-                                <a href="/ads/show?id=".<?=$ad['id'];?>.'"'>
-                                    <img src="<?=$ad['image_url'];?>" alt="" class="img-responsive image1">
+                                <a href="/ads/show?id=<?=$adArray['id'];?>">
+                                    <img src="<?=$adArray['image_url'];?>" alt="" class="img-responsive image1">
                                 </a>
                             </div>
                             <!-- /.image -->
                             <div class="text">
-                                <h3><a href="/ads/show?id=<?=$ad['name'];?>"</a></h3>
-                                <p class="price">$<?=$ad['price'];?></p>
+                                <h3><a href="/ads/show?id=<?=$adArray['id'];?>"</a><?=$adArray['name'];?></h3>
+                                <p class="price">$<?=$adArray['price'];?></p>
                                 <p class="buttons">
-                                    <a href="/ads/show?id=1" class="btn btn-default">View detail</a>
+                                    <a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-default">View detail</a>
                                 </p>
                             </div>
                             <!-- /.text -->
                         </div>
                         <!-- /.product -->
                     </div>
-                    <?php endforeach; ?>
                 <?php endforeach; ?>
             <!-- /end of products -->
 

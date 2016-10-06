@@ -32,9 +32,11 @@ function pageController($dbc)
 
     //ads pages
         case '/ads':
+            $data['adsToDisplay'] = Ad::all();
             $main_view = __DIR__.'/../views/ads/index.php';
             break;
         case '/ads/create':
+            $errors = createAd($dbc);
             $main_view = __DIR__.'/../views/ads/create.php';
             break;
         case '/ads/show':
@@ -69,15 +71,12 @@ function pageController($dbc)
 
     $limit = 8;
     //create Ad 
-    $errors = createAd($dbc);
-    $adsToDisplay = Ad::all();
+    
     $submitted = isset($_GET['submitted']) ? true : false;
 
 
 
     $data['submitted'] = $submitted;
-    $data['errors'] = $errors;
-    $data['adsToDisplay'] = $adsToDisplay;
     // 'page' => $page_number,
     // 'max_page' => $max_page_number,
 
@@ -89,4 +88,3 @@ function pageController($dbc)
 }
 
 extract(pageController($dbc));
-var_dump($adsToDisplay);
