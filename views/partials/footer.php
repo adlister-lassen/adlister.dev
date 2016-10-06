@@ -27,7 +27,7 @@
                         </div>
                         <div>
                             <a href="#">
-                                <img src="/img/Bacon-flavored-toothpaste.png" class="img-responsive" alt="#">
+                                <img src="/img/bacon-flavored-toothpaste.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
