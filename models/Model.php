@@ -196,7 +196,6 @@ class Model {
         $stmt = self::$dbc->prepare($query);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
-
         //Store the resultset in a variable named $result
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 

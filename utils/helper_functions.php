@@ -284,6 +284,18 @@ function findLoggedInUserOrRedirect()
     return $user;
 }
 
+function isAdOwner()
+{
+    $ad = Ad::find(Input::get('id'));
+    $user_id = $_SESSION['LOGGED_IN_ID'];
+    if ($ad->id == $user_id){
+        return true;
+    }
+    return false;
+}
+
+
+
 // pagination functions
 
 function getNumberOfAds($dbc)
@@ -331,6 +343,16 @@ function getPageNumber($max_page_number)
     return $page_number;
 }
 
+function getAdsBySeller($dbc)
+{
+
+    $query = 'SELECT a.id, a.name, a.price, a.date_created, a.ad_views FROM ads AS a JOIN users AS u ON u.id = a.user_id WHERE u.id = '.$_SESSION['LOGGED_IN_ID'];
+
+    $stmt = $dbc->prepare($query);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 
 
