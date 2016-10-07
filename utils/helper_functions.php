@@ -44,7 +44,7 @@ function saveUploadedImage($input_name)
     }
 }
 
-function createOrEditUser(){
+function createUser(){
     $errors = [];
     $name;
     $email;
@@ -119,6 +119,64 @@ function createOrEditUser(){
 
 } 
 
+function editUser(){
+    $errors = [];
+    $name;
+    $email;
+    $username;
+
+    //check for empty fields
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['username']))
+    {
+        try{
+            foreach ($_POST as $key => $value) {
+                if (empty($_POST[$key])) {
+                    throw new Exception("$key Field is empty");
+                } 
+            }
+
+        } catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+
+    } elseif(Input::has('name') && Input::has('email') && Input::has('username'))
+    
+    //if everthing is filled in validate every entry
+    {
+        try {
+            $name = Input::getString('name');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $email = Input::getString('email');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $username= Input::getString('username');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        
+        if (empty($errors)) {
+
+            $user = new User();
+            $user->id = $_SESSION['LOGGED_IN_ID'];
+            $user->name = $name;
+            $user->email = $email;
+            $user->username = $username;
+            $user->save();
+           
+            //redirect to user account after edit
+            header('Location: /users/account?id='.$user->id);
+            die();  
+            }
+    } 
+    return $errors;
+
+} 
+
 function createOrEditAd(){
     $errors = [];
     $user_id = $_SESSION['LOGGED_IN_ID'];
@@ -183,11 +241,9 @@ function createOrEditAd(){
             $ad->ad_views = $ad_views;
             $ad->save();
            
-           //redirect to user account after ad creation
-            if (!Input::has('id')){
-                header('Location: /users/account');
-                die(); 
-            }
+            header('Location: /users/account');
+            die(); 
+
         }
 
     } 
@@ -221,7 +277,7 @@ function findLoggedInUserOrRedirect()
 {
     $user = User::findByUsernameOrEmail($_SESSION['IS_LOGGED_IN']);
     if ($user == null) {
-        header('Location: /');
+        header('Location: /ads');
         die();
     }
 
