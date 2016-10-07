@@ -56,6 +56,7 @@
                                     <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
                                 </li>
                             </ul>
+
                         </div>
                     </div>
 
@@ -122,6 +123,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        
                         <!-- /.table-responsive -->
                     </div>
                     <!-- /.box -->
