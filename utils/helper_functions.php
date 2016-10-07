@@ -284,6 +284,7 @@ function findLoggedInUserOrRedirect()
     return $user;
 }
 
+// pagination functions
 
 function getNumberOfAds($dbc)
 {

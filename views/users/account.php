@@ -77,6 +77,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($adsToDisplay as $adArray): ?>
                                     <tr>
                                         <th>item1</th>
                                         <td>$150.00</td>
@@ -87,6 +88,7 @@
                                         </td>
                                         
                                     </tr>
+                                    <?php endforeach; ?>
                                     <tr>
                                         <th>item2</th>
                                         <td>$150.00</td>
