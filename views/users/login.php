@@ -46,7 +46,7 @@
 
                    
 
-                   <form method="POST" action="" data-validation data-required-message="This field is required">
+                   <form method="POST" action="/login" data-validation data-required-message="This field is required">
 
                         
                         <div class="form-group">
