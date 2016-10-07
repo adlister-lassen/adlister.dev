@@ -46,18 +46,16 @@ function pageController($dbc)
 
     //users pages
         case '/login':
-            $main_view = __DIR__.'/../views/users/login.php';
+            include __DIR__.'/../controllers/LoginController.php';
             break;
         case '/signup':
-            $main_view = __DIR__.'/../views/users/signup.php';
+            include __DIR__.'/../controllers/SignUpController.php';
             break;
         case '/users/account':
-            $main_view = __DIR__.'/../views/users/account.php';
+            include __DIR__.'/../controllers/AccountController.php';
             break;
-
         case '/users/edit':
-
-            $main_view = __DIR__.'/../views/users/edit.php';
+            include __DIR__.'/../controllers/EditUserController.php';
             break;
         default:    // displays 404 if route not specified above
             $main_view = __DIR__.'/../views/404.php';
