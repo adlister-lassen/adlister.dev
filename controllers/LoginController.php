@@ -4,7 +4,7 @@ if (empty(!$_POST)){
 			header('Location: /login');
 			die;
 		} else{
-			header('Location: /');
+			header('Location: /ads');
 		}
 }
 $main_view = __DIR__.'/../views/users/login.php';

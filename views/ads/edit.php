@@ -1,12 +1,4 @@
 <!--Page for editing your advertisement listings-->
-<?php 
-
-$_SESSION['IS_LOGGED_IN'] = 'bob';
-$_SESSION['LOGGED_IN_ID'] = 1;
-
-?>
-
-
 <div id="all">
     <!-- ==== Bread crumb for navigations ===== -->
     <div id="heading-breadcrumbs">
