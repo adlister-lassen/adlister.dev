@@ -1,5 +1,3 @@
-<div>
-
     <section id="login">
 
         <div class="row">
@@ -12,7 +10,7 @@
                         </div>
                         <div class="col-md-5">
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a>
+                                <li><a href="/">Home</a>
                                 </li>
                                 <li>Login</li>
                             </ul>
@@ -21,7 +19,7 @@
                     </div>
                 </div>
             </div>
-
+</div>
             <div class="container">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="box">
@@ -61,19 +59,16 @@
                         <div class="row">
                             <div class="col-sm-6">
                                  <button type="submit" class="btn btn-template-main"><i class="fa fa-sign-in"></i>Login</button>
-                            </div> </form>
+                            </div> 
+                    </form>
                             <div class="col-sm-6 text-right">
                                 <a type="button" href="/signup" class="btn"><i class="fa fa-user-md"></i>Go To Signup</a>
                             </div>
+                            </div>
                         </div>
 
-                   
-
-                </div>
-
-            </div>
-        </div>
+            
+        
 
     </section>
 
-</div>
