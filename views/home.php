@@ -139,7 +139,7 @@
                         </div>
                         <div class="see-more">
                             <p>Do you want to see more?</p>
-                            <a href="portfolio-4.html" class="btn btn-template-main">View All Listings</a>
+                            <a href="/ads" class="btn btn-template-main">View All Listings</a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ _________________________________________________________ -->
                     <h3>Need a gag gift or some prank gear?</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <a href="#" class="btn btn-template-transparent-primary">This Is The Place</a>
+                    <a href="/ads" class="btn btn-template-transparent-primary">This Is The Place</a>
                 </div>
             </div>
         </div>

@@ -21,32 +21,32 @@
                     <h4>Recently Added Items</h4>
                     <div class="photostream">
                         <div>
-                            <a href="#">
+                            <a href="/ads/show?id=18">
                                 <img src="/img/uploads/horn-speaker.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="/ads/show?id=6">
                                 <img src="/img/uploads/bacon-flavored-toothpaste.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="/ads/show?id=4">
                                 <img src="/img/uploads/breakfast-maker.png" class="img-responsive" alt="#">
                             </a>    
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="/ads/show?id=9">
                                 <img src="/img/uploads/cupcake-floww.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="/ads/show?id=11">
                                 <img src="/img/uploads/disco-ball-helmet.png" class="img-responsive" alt="#">
                             </a>
                         </div>
                         <div>
-                            <a href="#">
+                            <a href="/ads/show?id=19">
                                 <img src="/img/uploads/lobster-case.png" class="img-responsive" alt="#">
                             </a>
                         </div>

@@ -28,9 +28,8 @@
                         <i class="fa fa-user"></i>
                     </div>
                     <h3><?=$_SESSION['IS_LOGGED_IN']?></h3>
-                    <p>
-                        <?=$_SESSION[ 'LOGGED_IN_ID']?>
-                    </p>
+                    <p>user id goes here</p>
+                    <p>email goes here</p>
                 </div>
 
 
@@ -50,12 +49,10 @@
                                     <a href="/ads/create"><i class="fa fa-plus"></i>  Create New Ad</a>
                                 </li>
                                 <li>
-                                    <a href="/ads/edit"><i class="fa fa-pencil"></i>  Edit Ad</a>
-                                </li>
-                                <li>
                                     <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
                                 </li>
                             </ul>
+
                         </div>
                     </div>
 
@@ -75,53 +72,61 @@
                                         <th>Price</th>
                                         <th>Date Created</th>
                                         <th>Item Views</th>
-                                        <th>Details</th>
+                                        <th>View Ad</th>
+                                        <th>Edit Ad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th>item1</th>
-                                        <td>150</td>
+                                        <td>$150.00</td>
                                         <td>1/1/2016</td>
-                                        <td>description goes here</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a>
+                                        <td>number of views</td>
+                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
+                                        
                                     </tr>
                                     <tr>
                                         <th>item2</th>
-                                        <td>150</td>
+                                        <td>$150.00</td>
                                         <td>1/1/2016</td>
-                                        <td>description goes here</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a>
+                                        <td>number of views</td>
+                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>item3</th>
-                                        <td>150</td>
+                                        <td>$150.00</td>
                                         <td>1/1/2016</td>
-                                        <td>description goes here</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a>
+                                        <td>number of views</td>
+                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>item4</th>
-                                        <td>150</td>
+                                        <td>$150.00</td>
                                         <td>1/1/2016</td>
-                                        <td>description goes here</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a>
+                                        <td>number of views</td>
+                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>item5</th>
-                                        <td>150</td>
+                                        <td>$150.00</td>
                                         <td>1/1/2016</td>
-                                        <td>description goes here</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a>
+                                        <td>number of views</td>
+                                       <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                        
                         <!-- /.table-responsive -->
                     </div>
                     <!-- /.box -->
@@ -131,4 +136,3 @@
     </div>
 
 </section>
-
