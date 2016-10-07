@@ -84,52 +84,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($adsToDisplay as $adArray): ?>
                                     <tr>
-                                        <th>item1</th>
-                                        <td>$150.00</td>
-                                        <td>1/1/2016</td>
-                                        <td>number of views</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
-                                        </td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <th>item2</th>
-                                        <td>$150.00</td>
-                                        <td>1/1/2016</td>
-                                        <td>number of views</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
+                                        <th><?=$adArray['name'];?></th>
+                                        <td><?=$adArray['price'];?></td>
+                                        <td><?=$adArray['date_created'];?></td>
+                                        <td><?=$adArray['ad_views'];?></td>
+                                        <td><a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th>item3</th>
-                                        <td>$150.00</td>
-                                        <td>1/1/2016</td>
-                                        <td>number of views</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>item4</th>
-                                        <td>$150.00</td>
-                                        <td>1/1/2016</td>
-                                        <td>number of views</td>
-                                        <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>item5</th>
-                                        <td>$150.00</td>
-                                        <td>1/1/2016</td>
-                                        <td>number of views</td>
-                                       <td><a href="/ads/show" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit" class="btn btn-template-main btn-sm">Edit</a>
-                                        </td>
-                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
