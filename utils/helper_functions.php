@@ -44,6 +44,80 @@ function saveUploadedImage($input_name)
     }
 }
 
+function createOrEditUser(){
+    $errors = [];
+    $name;
+    $email;
+    $username;
+    $password;
+
+    //check for empty fields
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password']))
+    {
+        try{
+            foreach ($_POST as $key => $value) {
+                if (empty($_POST[$key])) {
+                    throw new Exception("$key Field is empty");
+                } 
+            }
+
+        } catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+
+    } elseif(Input::has('name') && Input::has('email') && Input::has('username') && Input::has('password'))
+    
+    //if everthing is filled in validate every entry
+    {
+        try {
+            $name = Input::getString('name');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $email = Input::getString('email');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $username= Input::getString('username');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $password = Input::getString('password');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        
+        if (empty($errors)) {
+
+            $user = new User();
+            if (Input::has('name')) {
+                $user->id = Input::get('id');
+            }
+            $user->name = $name;
+            $user->email = $email;
+            $user->username = $username;
+            $user->password = $password;
+            $user->save();
+           
+           //redirect to user account after user creation
+            if (!Input::has('id')){
+                //set session to show as logged in
+                $_SESSION['IS_LOGGED_IN'] = $user->username;
+                $_SESSION['LOGGED_IN_ID'] = $user->id;
+
+                //redirect to user account
+                header('Location: /users/account?id='.$user->id);
+                die(); 
+            }
+        }
+
+    } 
+    return $errors;
+
+} 
 
 function createOrEditAd(){
     $errors = [];
@@ -131,6 +205,18 @@ function findAdOrRedirect()
 
     return $ad;
 }
+
+function findUserOrRedirect()
+{
+    $user = User::find(Input::get('id'));
+    if ($user == null) {
+        header('Location: /');
+        die();
+    }
+
+    return $user;
+}
+
 
 
 function getNumberOfAds($dbc)
