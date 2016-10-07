@@ -23,7 +23,7 @@
             </div>
 
             <div class="container">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-6 col-md-offset-3">
                     <div class="box">
                         <center>
                             <h2 class="text-uppercase">Create new account</h2>
@@ -32,15 +32,12 @@
 
 
 
-
                     <?php if (isset($_SESSION[ 'ERROR_MESSAGE'])) : ?>
                     <div class="alert alert-danger">
                         <p class="error">
-<<<<<<< HEAD
+
                             <?=$_SESSION[ 'ERROR_MESSAGE']; ?>
-=======
-                            <?= $_SESSION[ 'ERROR_MESSAGE']; ?>
->>>>>>> master
+
                         </p>
                     </div>
                     <?php unset($_SESSION[ 'ERROR_MESSAGE']); ?>
@@ -48,11 +45,9 @@
                     <?php if (isset($_SESSION[ 'SUCCESS_MESSAGE'])) : ?>
                     <div class="alert alert-success">
                         <p class="success">
-<<<<<<< HEAD
+
                             <?=$_SESSION[ 'SUCCESS_MESSAGE']; ?>
-=======
-                            <?= $_SESSION[ 'SUCCESS_MESSAGE']; ?>
->>>>>>> master
+                            
                         </p>
                     </div>
                     <?php unset($_SESSION[ 'SUCCESS_MESSAGE']); ?>
@@ -76,7 +71,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Register</button>
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Signup</button>
                             </div>
                             <div class="col-sm-6 text-right">
                                 <a type="button" href="/login" class="btn"><i class="fa fa-sign-in"></i>Go To Login</a>
