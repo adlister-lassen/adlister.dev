@@ -1,3 +1,3 @@
 <?php
-$data['user'] = findUserOrRedirect();
+$data['user'] = findLoggedInUserOrRedirect();
 $main_view = __DIR__.'/../views/users/account.php';
