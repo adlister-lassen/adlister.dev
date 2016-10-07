@@ -217,6 +217,16 @@ function findUserOrRedirect()
     return $user;
 }
 
+function findLoggedInUserOrRedirect()
+{
+    $user = User::findByUsernameOrEmail($_SESSION['IS_LOGGED_IN']);
+    if ($user == null) {
+        header('Location: /');
+        die();
+    }
+
+    return $user;
+}
 
 
 function getNumberOfAds($dbc)
