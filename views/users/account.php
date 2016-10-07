@@ -28,9 +28,11 @@
                         <i class="fa fa-user"></i>
                     </div>
                     <h3><?=$user->name?></h3>
-                    <p><?=$user->username?></p>
-                    <p><?=$user->email?></p>
+                    <p class="text-muted lead">Username: <?= $user->username; ?></p>
+                    <p class="text-muted lead">Email: <?= $user->email; ?></p>
+
                 </div>
+
 
 
                 <div class="col-md-2 col-md-offset-5">
@@ -43,8 +45,13 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
                                 <li>
-                                    <a href="/users/edit?id=<?=$user->id?>"><i class="fa fa-user"></i>  Edit Profile</a>
+                                    <?php if($user->id == Auth::id()) : ?>
+                                    <a href="/users/edit?id=<?= $user->id; ?>"><i class="fa fa-user"></i>  Edit Profile</a>
                                 </li>
+                                 <?php endif; ?>
+                
+
+
                                 <li>
                                     <a href="/ads/create?id=<?=$user->id?>"><i class="fa fa-plus"></i>  Create New Ad</a>
                                 </li>
