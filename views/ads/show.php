@@ -84,7 +84,7 @@
                                     <a href="/ads/create"><i class="fa fa-plus"></i>  Create New Ad</a>
                                 </li>
                                 <li>
-                                    <a href="/ads/edit"><i class="fa fa-pencil"></i>  Edit Ad</a>
+                                    <a href="/ads/edit?id=<?= $ad->id;?>"><i class="fa fa-pencil"></i>  Edit Ad</a>
                                 </li>
                                 <li>
                                     <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>

@@ -13,7 +13,7 @@ $_SESSION['LOGGED_IN_ID'] = 1;
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>Create Your Ad</h1>
+                    <h1>edit Your Ad</h1>
                 </div>
                 <div class="col-md-5">
                     <ul class="breadcrumb">
@@ -36,37 +36,42 @@ $_SESSION['LOGGED_IN_ID'] = 1;
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage">
-                                <img src="http://placehold.it/450x450" alt="placeholder image" class="img-responsive">
+                                <img src="<?= $ad->image_url;?>" alt="placeholder image" class="img-responsive">
                             </div>
                         </div>
                         <!-- /.col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="box">
-                                <form method="POST" action="/ads/create?submitted=true" id="createAd" data-validation data-required-message="This field is required">
+                                <form method="POST" action="/ads/edit?id=<?= $ad->id ?>&submitted=true" id="createAd" data-validation data-required-message="This field is required">
                                     <div class="sizes">
                                         <h3>Product Information</h3>
                                     </div>
                                     <div class="form-group">
-                                        <input value="<?= Input::get('name') ?>" type="text" class="form-control" id="name" name="name" placeholder="Product Name" data-required>
+                                        <input value="<?= $ad->name ?>" type="text" class="form-control" id="name" name="name" placeholder="Product Name" data-required>
                                     </div>
                                     <div class="form-group">
-                                        <textarea placeholder="Product Description" rows="8" class="form-control" id="description" name="description" data-required>
-                                            <?= Input::get('description') ?>
-                                        </textarea>
+                                        <textarea placeholder="Product Description" rows="8" class="form-control" id="description" name="description" data-required><?= $ad->description; ?></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <input value="<?= Input::get('price') ?>" type="text" class="form-control" id="price" name="price" placeholder="Product price $" data-required>
+                                        <input value="<?= $ad->price; ?>" type="text" class="form-control" id="price" name="price" placeholder="Product price $" data-required>
                                     </div>
                                     <div class="form-group">
-                                        <input value="<?= Input::get('image_url') ?>" type="text" class="form-control" id="image_url" name="image_url" placeholder="Filepath/imagename.png" data-required>
+                                        <input value="<?= $ad->image_url ?>" type="text" class="form-control" id="image_url" name="image_url" placeholder="Filepath/imagename.png" data-required>
                                     </div>
                                     <div class="sizes">
                                         <!-- ========== PULL AND POPULATE LOGGED IN USERNAME  ========== -->
                                         <h3>Sold by <?=$_SESSION['IS_LOGGED_IN']?></h3>
                                     </div>
-                                </form>
+
                             </div>
                             <!-- /.box -->
+                                    <div class="col-sm-6">
+                                         <button type="submit" class="btn btn-template-main"><i class="fa fa-floppy-o"></i>  Save This Ad</button>
+                                    </div> </form>
+
+                                    <div class="col-sm-6 text-right">
+                                        <a type="button" href="/users/account" class="btn"><i class="fa fa-ban"></i>  Cancel</a>
+                                    </div>
                         </div>
                         <!-- /.col-sm-6 -->
                     </div>
@@ -83,15 +88,9 @@ $_SESSION['LOGGED_IN_ID'] = 1;
                 <div class="col-sm-3">
                     <div class="panel panel-default sidebar-menu">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Create Your Ad</h3>
+                            <h3 class="panel-title">Edit Your Ad</h3>
                         </div>
                         <!-- /.bar -->
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a type="submit" form="credateAd"><i class="fa fa-floppy-o"></i>  Save This Ad</a></li>
-                                <li><a href="/users/account"><i class="fa fa-ban"></i>  Cancel</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <!-- /.col-sm-3 -->
