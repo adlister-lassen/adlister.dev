@@ -36,7 +36,6 @@ function pageController($dbc)
             $max_page_number = getMaxPageNumber($dbc,$limit);
             $page_number = getPageNumber($max_page_number);
             $data['adsToDisplay'] = getAds($dbc,$page_number,$limit);
-            // $data['adsToDisplay'] = Ad::all();
             $main_view = __DIR__.'/../views/ads/index.php';
             $data['page'] = $page_number;
             $data['max_page'] = $max_page_number;
@@ -80,11 +79,6 @@ function pageController($dbc)
             break;
 
     }
-
-    
-    // 'page' => $page_number,
-    // 'max_page' => $max_page_number,
-
     
     $data['main_view'] = $main_view;
 
