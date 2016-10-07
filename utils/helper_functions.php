@@ -45,7 +45,7 @@ function saveUploadedImage($input_name)
 }
 
 
-function createAd($dbc){
+function createOrEditAd(){
     $errors = [];
     $user_id = $_SESSION['LOGGED_IN_ID'];
     $name;
@@ -96,20 +96,24 @@ function createAd($dbc){
         
         if (empty($errors)) {
 
-            $query = 'INSERT INTO ads (user_id, name, description, price, image_url, date_created, ad_views) VALUES (:user_id, :name, :description, :price, :image_url, :date_created, :ad_views)';
-            $stmt = $dbc->prepare($query);
-
-            $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
-            $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-            $stmt->bindValue(':description', $description, PDO::PARAM_STR);
-            $stmt->bindValue(':price', $price, PDO::PARAM_STR);
-            $stmt->bindValue(':image_url', $image_url, PDO::PARAM_STR);
-            $stmt->bindValue(':date_created', $date_created, PDO::PARAM_STR);
-            $stmt->bindValue(':ad_views', $ad_views, PDO::PARAM_STR);
-
-            $stmt->execute();
-            header('Location: /users/account');
-            die();
+            $ad = new Ad();
+            if (Input::has('name')) {
+                $ad->id = Input::get('id');
+            }
+            $ad->user_id = $user_id;
+            $ad->name = $name;
+            $ad->description = $description;
+            $ad->price = $price;
+            $ad->image_url = $image_url;
+            $ad->date_created = $date_created;
+            $ad->ad_views = $ad_views;
+            $ad->save();
+           
+           //redirect to user account after ad creation
+            if (!Input::has('id')){
+                header('Location: /users/account');
+                die(); 
+            }
         }
 
     } 
