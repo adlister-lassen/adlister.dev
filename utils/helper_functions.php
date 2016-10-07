@@ -44,8 +44,82 @@ function saveUploadedImage($input_name)
     }
 }
 
+function createOrEditUser(){
+    $errors = [];
+    $name;
+    $email;
+    $username;
+    $password;
 
-function createAd($dbc){
+    //check for empty fields
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password']))
+    {
+        try{
+            foreach ($_POST as $key => $value) {
+                if (empty($_POST[$key])) {
+                    throw new Exception("$key Field is empty");
+                } 
+            }
+
+        } catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+
+    } elseif(Input::has('name') && Input::has('email') && Input::has('username') && Input::has('password'))
+    
+    //if everthing is filled in validate every entry
+    {
+        try {
+            $name = Input::getString('name');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $email = Input::getString('email');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $username= Input::getString('username');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        try {
+            $password = Input::getString('password');
+        }catch (Exception $e) {
+            $errors[] = $e->getMessage();
+        }
+        
+        if (empty($errors)) {
+
+            $user = new User();
+            if (Input::has('name')) {
+                $user->id = Input::get('id');
+            }
+            $user->name = $name;
+            $user->email = $email;
+            $user->username = $username;
+            $user->password = $password;
+            $user->save();
+           
+           //redirect to user account after user creation
+            if (!Input::has('id')){
+                //set session to show as logged in
+                $_SESSION['IS_LOGGED_IN'] = $user->username;
+                $_SESSION['LOGGED_IN_ID'] = $user->id;
+
+                //redirect to user account
+                header('Location: /users/account?id='.$user->id);
+                die(); 
+            }
+        }
+
+    } 
+    return $errors;
+
+} 
+
+function createOrEditAd(){
     $errors = [];
     $user_id = $_SESSION['LOGGED_IN_ID'];
     $name;
@@ -96,20 +170,24 @@ function createAd($dbc){
         
         if (empty($errors)) {
 
-            $query = 'INSERT INTO ads (user_id, name, description, price, image_url, date_created, ad_views) VALUES (:user_id, :name, :description, :price, :image_url, :date_created, :ad_views)';
-            $stmt = $dbc->prepare($query);
-
-            $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
-            $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-            $stmt->bindValue(':description', $description, PDO::PARAM_STR);
-            $stmt->bindValue(':price', $price, PDO::PARAM_STR);
-            $stmt->bindValue(':image_url', $image_url, PDO::PARAM_STR);
-            $stmt->bindValue(':date_created', $date_created, PDO::PARAM_STR);
-            $stmt->bindValue(':ad_views', $ad_views, PDO::PARAM_STR);
-
-            $stmt->execute();
-            header('Location: /users/account');
-            die();
+            $ad = new Ad();
+            if (Input::has('name')) {
+                $ad->id = Input::get('id');
+            }
+            $ad->user_id = $user_id;
+            $ad->name = $name;
+            $ad->description = $description;
+            $ad->price = $price;
+            $ad->image_url = $image_url;
+            $ad->date_created = $date_created;
+            $ad->ad_views = $ad_views;
+            $ad->save();
+           
+           //redirect to user account after ad creation
+            if (!Input::has('id')){
+                header('Location: /users/account');
+                die(); 
+            }
         }
 
     } 
@@ -127,6 +205,18 @@ function findAdOrRedirect()
 
     return $ad;
 }
+
+function findUserOrRedirect()
+{
+    $user = User::find(Input::get('id'));
+    if ($user == null) {
+        header('Location: /');
+        die();
+    }
+
+    return $user;
+}
+
 
 
 function getNumberOfAds($dbc)

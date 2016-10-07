@@ -55,19 +55,19 @@
 
                    
 
-                   <form method="POST" action="" data-validation data-required-message="This field is required">
+                   <form method="POST" action="/signup?submitted=true" data-validation data-required-message="This field is required">
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name-login" name="name" placeholder="Full Name" data-required>
+                            <input value="<?= Input::get('name') ?>" type="text" class="form-control" id="name-login" name="name" placeholder="Full Name" data-required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="email-login" name="email" placeholder="Email" data-required>
+                            <input value="<?= Input::get('email') ?>" type="text" class="form-control" id="email-login" name="email" placeholder="Email" data-required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="username-login" name="username" placeholder="Username" data-required>
+                            <input value="<?= Input::get('username') ?>" type="text" class="form-control" id="username-login" name="username" placeholder="Username" data-required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="password-login" name="password" placeholder="Password" data-required>
+                            <input value="<?= Input::get('password') ?>" type="password" class="form-control" id="password-login" name="password" placeholder="Password" data-required>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">

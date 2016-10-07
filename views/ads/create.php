@@ -50,9 +50,7 @@ $_SESSION['LOGGED_IN_ID'] = 1;
                                         <input value="<?= Input::get('name') ?>" type="text" class="form-control" id="name" name="name" placeholder="Product Name" data-required>
                                     </div>
                                     <div class="form-group">
-                                        <textarea placeholder="Product Description" rows="8" class="form-control" id="description" name="description" data-required>
-                                            <?= Input::get('description') ?>
-                                        </textarea>
+                                        <textarea placeholder="Product Description" rows="8" class="form-control" id="description" name="description" data-required><?= Input::get('description') ?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <input value="<?= Input::get('price') ?>" type="text" class="form-control" id="price" name="price" placeholder="Product price $" data-required>
@@ -64,9 +62,18 @@ $_SESSION['LOGGED_IN_ID'] = 1;
                                         <!-- ========== PULL AND POPULATE LOGGED IN USERNAME  ========== -->
                                         <h3>Sold by <?=$_SESSION['IS_LOGGED_IN']?></h3>
                                     </div>
-                                </form>
                             </div>
                             <!-- /.box -->
+                                    <div class="col-sm-6">
+                                         <button type="submit" class="btn btn-template-main"><i class="fa fa-floppy-o"></i>  Save This Ad</button>
+                                    </div> </form>
+
+                                    <div class="col-sm-6 text-right">
+                                        <a type="button" href="/users/account" class="btn"><i class="fa fa-ban"></i>  Cancel</a>
+                                    </div>
+
+
+
                         </div>
                         <!-- /.col-sm-6 -->
                     </div>
@@ -86,12 +93,6 @@ $_SESSION['LOGGED_IN_ID'] = 1;
                             <h3 class="panel-title">Create Your Ad</h3>
                         </div>
                         <!-- /.bar -->
-                        <div class="panel-body">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a type="submit" form="credateAd"><i class="fa fa-floppy-o"></i>  Save This Ad</a></li>
-                                <li><a href="/users/account"><i class="fa fa-ban"></i>  Cancel</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <!-- /.col-sm-3 -->

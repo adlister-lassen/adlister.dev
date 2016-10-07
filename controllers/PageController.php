@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__ . '/../utils/helper_functions.php';
+require_once __DIR__ . '/../utils/Auth.php';
+
 
 function pageController($dbc)
 {
@@ -32,47 +34,30 @@ function pageController($dbc)
 
     //ads pages
         case '/ads':
-            $limit = 6; 
-            $max_page_number = getMaxPageNumber($dbc,$limit);
-            $page_number = getPageNumber($max_page_number);
-            $data['adsToDisplay'] = getAds($dbc,$page_number,$limit);
-            $main_view = __DIR__.'/../views/ads/index.php';
-            $data['page'] = $page_number;
-            $data['max_page'] = $max_page_number;
+            include __DIR__.'/../controllers/AdsController.php';
             break;
         case '/ads/create':
-            $errors = createAd($dbc);
-            $submitted = isset($_GET['submitted']) ? true : false;
-            $data['submitted'] = $submitted;
-            $main_view = __DIR__.'/../views/ads/create.php';
+            include __DIR__.'/../controllers/CreateAdController.php';
             break;
         case '/ads/show':
-            $adId = Input::get('id');
-            $ad = Ad::find($adId);
-            $sellerId = $ad->user_id;
-            $data['seller'] = User::find($sellerId);
-            $data['ad'] = findAdOrRedirect();
-            $main_view = __DIR__.'/../views/ads/show.php';
+            include __DIR__.'/../controllers/ShowAdController.php';
             break;
         case '/ads/edit':
-            $data['ad'] = findAdOrRedirect();
-            $main_view = __DIR__.'/../views/ads/edit.php';
+            include __DIR__.'/../controllers/EditAdController.php';
             break;
 
     //users pages
         case '/login':
-            $main_view = __DIR__.'/../views/users/login.php';
+            include __DIR__.'/../controllers/LoginController.php';
             break;
         case '/signup':
-            $main_view = __DIR__.'/../views/users/signup.php';
+            include __DIR__.'/../controllers/SignUpController.php';
             break;
         case '/users/account':
-            $main_view = __DIR__.'/../views/users/account.php';
+            include __DIR__.'/../controllers/AccountController.php';
             break;
-
         case '/users/edit':
-
-            $main_view = __DIR__.'/../views/users/edit.php';
+            include __DIR__.'/../controllers/EditUserController.php';
             break;
         default:    // displays 404 if route not specified above
             $main_view = __DIR__.'/../views/404.php';
