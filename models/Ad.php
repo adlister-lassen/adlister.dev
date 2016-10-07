@@ -37,9 +37,6 @@ class Ad extends Model {
 
 
 
-       
-
-
 }
 
 ?>

@@ -113,7 +113,6 @@ function createAd($dbc){
         }
 
     } 
-var_dump($errors);
     return $errors;
 
 } 
