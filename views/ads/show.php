@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>Item Name Goes Here</h1>
+                    <h1><?= $ad->name;?></h1>
                 </div>
                 <div class="col-md-5">
                     <ul class="breadcrumb">
@@ -14,7 +14,7 @@
                         </li>
                         <li><a href="/ads">All Items</a>
                         </li>
-                        <li>Item Name Goes Here</li>
+                        <li><?= $ad->name;?></li>
                     </ul>
 
                 </div>
@@ -33,7 +33,7 @@
 	            <div class="row" id="productMain">
 	                <div class="col-sm-6">
 	                    <div id="mainImage">
-	                        <img src="/img/detailbig1.jpg" alt="" class="img-responsive">
+	                        <img src="<?= $ad->image_url;?>" alt="" class="img-responsive">
 	                    </div>
 	                </div>
 	                    <div class="col-sm-6">
@@ -42,19 +42,14 @@
 
                                     <h3>Product Details</h3>
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p><?=$ad->description;?></p>
 
                                 </div>
 
-                                <p class="price">$124.00</p>
+                                <p class="price">$ <?=$ad->price;?></p>
                                 <br>
                                 <div class="heading">
-                                    <h3>Sold by --seller name --</h3>
+                                    <h3>Sold by <?=$seller->username?></h3>
                                 </div>
 	                        </div>
 	                    </div>
@@ -78,16 +73,24 @@
                 <div class="col-sm-3">
                     <div class="panel panel-default sidebar-menu">
                         <div class="panel-heading">
-                            <h3 class="panel-title">edit your ad</h3>
+                            <h3 class="panel-title">My Account</h3>
                         </div>
-                    </div>
-                    <!-- /.bar -->
-                    <div class="bar background-dark-gray padding-horizontal margin-vertical">
-                        <a href="/ads/edit">
-                        <button type="button" class="features-buttons button btn btn-lg btn-template-transparent-primary">edit this ad</button>
-                        </a>
-                        <p style="margin-bottom:40px"></p>
-                        <button type="button" class="btn btn-lg btn-template-transparent-primary">Delete This Ad</button>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a href="/users/edit"><i class="fa fa-user"></i>  Edit Profile</a>
+                                </li>
+                                <li>
+                                    <a href="/ads/create"><i class="fa fa-plus"></i>  Create New Ad</a>
+                                </li>
+                                <li>
+                                    <a href="/ads/edit"><i class="fa fa-pencil"></i>  Edit Ad</a>
+                                </li>
+                                <li>
+                                    <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <!-- /.col-md-3 -->
