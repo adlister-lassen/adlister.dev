@@ -34,7 +34,7 @@
                     <div class="icon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <h3><?=$_SESSION['IS_LOGGED_IN']?></h3>
+                    <h3><?=$user->name?></h3>
                     <p>
                         <?= $user->email; ?>
                         <?= $user->username; ?>
@@ -63,7 +63,7 @@
 	                <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
 	            <?php endif; ?>
 
-				<form method="POST" action="" data-validation data-required-message="This field is required">
+				<form method="POST" action="/users/edit?id=<?= $user->id ?>&submitted=true" data-validation data-required-message="This field is required">
 
 					<div class="form-group">
 					    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?= $user->name; ?>" data-required>

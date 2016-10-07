@@ -27,9 +27,9 @@
                     <div class="icon">
                         <i class="fa fa-user"></i>
                     </div>
-                    <h3><?=$_SESSION['IS_LOGGED_IN']?></h3>
-                    <p>user id goes here</p>
-                    <p>email goes here</p>
+                    <h3><?=$user->name?></h3>
+                    <p><?=$user->username?></p>
+                    <p><?=$user->email?></p>
                 </div>
 
 
@@ -43,10 +43,10 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
                                 <li>
-                                    <a href="/users/edit"><i class="fa fa-user"></i>  Edit Profile</a>
+                                    <a href="/users/edit?id=<?=$user->id?>"><i class="fa fa-user"></i>  Edit Profile</a>
                                 </li>
                                 <li>
-                                    <a href="/ads/create"><i class="fa fa-plus"></i>  Create New Ad</a>
+                                    <a href="/ads/create?id=<?=$user->id?>"><i class="fa fa-plus"></i>  Create New Ad</a>
                                 </li>
                                 <li>
                                     <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
