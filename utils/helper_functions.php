@@ -343,16 +343,14 @@ function getPageNumber($max_page_number)
 
 //------------------- featured Ads
 
-function getFeaturedAds($dbc, $page_number,$limit)
+function getFeaturedAds($dbc)
 {
-
-    $ads_query = 'SELECT * FROM ads LIMIT 3 ORDER BY ad_views;';
-
-    $offset = calculateOffset($page_number, $limit);
+    $limit = 3;
+    
+    $ads_query = 'SELECT * FROM ads ORDER BY ad_views DESC LIMIT :limit;';
 
     $stmt = $dbc->prepare($ads_query);
     $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
-    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
