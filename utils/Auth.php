@@ -91,6 +91,17 @@ class Auth
 	    return true;
 	    redirect("/");
 	}
+
+	//returns bool checking if logged in user is same as ad's owner
+	public static function checkAdOwner()
+	{
+		 $ad = Ad::find(Input::get('id'));
+
+		 return $ad->attributes['user_id'] == self::id();
+	}
+
+
+
 }
 
 ?>

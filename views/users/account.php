@@ -46,7 +46,7 @@
                             <ul class="nav nav-pills nav-stacked">
                                 <li>
                                     <?php if($user->id == Auth::id()) : ?>
-                                    <a href="/users/edit?id=<?= $user->id; ?>"><i class="fa fa-user"></i>  Edit Profile</a>
+                                    <a href="/users/edit"><i class="fa fa-user"></i>  Edit Profile</a>
                                 </li>
                                  <?php endif; ?>
                 
@@ -84,14 +84,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($adsToDisplay as $adArray): ?>
+                                    <?php foreach($adsToDisplay->attributes as $ad): ?>
                                     <tr>
-                                        <th><?=$adArray['name'];?></th>
-                                        <td><?=$adArray['price'];?></td>
-                                        <td><?=$adArray['date_created'];?></td>
-                                        <td><?=$adArray['ad_views'];?></td>
-                                        <td><a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">Edit</a>
+                                        <th><?=$ad['name'];?></th>
+                                        <td>$ <?=$ad['price'];?></td>
+                                        <td><?=$ad['date_created'];?></td>
+                                        <td><?=$ad['ad_views'];?></td>
+                                        <td><a href="/ads/show?id=<?=$ad['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit?id=<?=$ad['id'];?>" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>

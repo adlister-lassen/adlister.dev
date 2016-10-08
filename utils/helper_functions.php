@@ -44,6 +44,36 @@ function saveUploadedImage($input_name)
     }
 }
 
+
+//--------------------------------- database functions
+
+//returns bool, checks for any empty fields in POST from form
+function emptyFields()
+{
+    foreach ($_POST as $key => $value) {
+        if (empty($_POST[$key])) {
+            return true;
+        } 
+    }
+    return false;
+}
+
+//returns error array, array element are error messages identifying empty $key
+function checkEmptyFields()
+{
+    $errors =[];
+    try{
+        foreach ($_POST as $key => $value) {
+            if (empty($_POST[$key])) {
+                throw new Exception("$key Field is empty");
+            } 
+        }
+    } catch (Exception $e) {
+        $errors[] = $e->getMessage();
+    }
+    return $errors;
+}
+
 function createUser(){
     $errors = [];
     $name;
@@ -52,23 +82,12 @@ function createUser(){
     $password;
 
     //check for empty fields
-    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['username']) || empty($_POST['password']))
-    {
-        try{
-            foreach ($_POST as $key => $value) {
-                if (empty($_POST[$key])) {
-                    throw new Exception("$key Field is empty");
-                } 
-            }
-
-        } catch (Exception $e) {
-            $errors[] = $e->getMessage();
-        }
-
-    } elseif(Input::has('name') && Input::has('email') && Input::has('username') && Input::has('password'))
+    if (emptyFields()){
+        $errors = checkEmptyFields();
+    } else {
     
     //if everthing is filled in validate every entry
-    {
+
         try {
             $name = Input::getString('name');
         }catch (Exception $e) {
@@ -116,7 +135,6 @@ function createUser(){
 
     } 
     return $errors;
-
 } 
 
 function editUser(){
@@ -126,21 +144,9 @@ function editUser(){
     $username;
 
     //check for empty fields
-    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['username']))
-    {
-        try{
-            foreach ($_POST as $key => $value) {
-                if (empty($_POST[$key])) {
-                    throw new Exception("$key Field is empty");
-                } 
-            }
-
-        } catch (Exception $e) {
-            $errors[] = $e->getMessage();
-        }
-
-    } elseif(Input::has('name') && Input::has('email') && Input::has('username'))
-    
+    if (emptyFields()){
+        $errors = checkEmptyFields();
+    } else  
     //if everthing is filled in validate every entry
     {
         try {
@@ -169,6 +175,8 @@ function editUser(){
             $user->save();
            
             //redirect to user account after edit
+            $_SESSION['IS_LOGGED_IN'] = $user->username;
+            $_SESSION['LOGGED_IN_ID'] = $user->id;
             header('Location: /users/account?id='.$user->id);
             die();  
             }
@@ -188,20 +196,9 @@ function createOrEditAd(){
     $ad_views=0;
 
     //check for empty fields
-    if (empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['image_url']))
-    {
-        try{
-            foreach ($_POST as $key => $value) {
-                if (empty($_POST[$key])) {
-                    throw new Exception("$key Field is empty");
-                } 
-            }
-
-        } catch (Exception $e) {
-            $errors[] = $e->getMessage();
-        }
-
-    } elseif(Input::has('name') && Input::has('description') && Input::has('price') && Input::has('image_url'))
+    if (emptyFields()){
+        $errors = checkEmptyFields();
+    } else
     
     //if everthing is filled in validate every entry
     {
@@ -225,7 +222,6 @@ function createOrEditAd(){
         }catch (Exception $e) {
             $errors[] = $e->getMessage();
         }
-        
         if (empty($errors)) {
 
             $ad = new Ad();
@@ -249,7 +245,9 @@ function createOrEditAd(){
     } 
     return $errors;
 
-} 
+}
+
+// --------------------------------- page controller functions  
 
 function findAdOrRedirect()
 {
@@ -262,41 +260,32 @@ function findAdOrRedirect()
     return $ad;
 }
 
+function editAdOrRedirect()
+{
+    if (! Auth::checkAdOwner()) {
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        die();
+    }
+    $ad = Ad::find(Input::get('id'));
+    return $ad;
+}
+
+
 function findUserOrRedirect()
 {
-    $user = User::find(Input::get('id'));
+    $user = User::find($_SESSION['LOGGED_IN_ID']);
     if ($user == null) {
-        header('Location: /');
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
         die();
     }
 
     return $user;
 }
 
-function findLoggedInUserOrRedirect()
-{
-    $user = User::findByUsernameOrEmail($_SESSION['IS_LOGGED_IN']);
-    if ($user == null) {
-        header('Location: /ads');
-        die();
-    }
-
-    return $user;
-}
-
-function isAdOwner()
-{
-    $ad = Ad::find(Input::get('id'));
-    $user_id = $_SESSION['LOGGED_IN_ID'];
-    if ($ad->id == $user_id){
-        return true;
-    }
-    return false;
-}
 
 
 
-// pagination functions
+// ------------------------------------    pagination functions
 
 function getNumberOfAds($dbc)
 {
@@ -342,18 +331,6 @@ function getPageNumber($max_page_number)
 
     return $page_number;
 }
-
-function getAdsBySeller($dbc)
-{
-
-    $query = 'SELECT a.id, a.name, a.price, a.date_created, a.ad_views FROM ads AS a JOIN users AS u ON u.id = a.user_id WHERE u.id = '.$_SESSION['LOGGED_IN_ID'];
-
-    $stmt = $dbc->prepare($query);
-    $stmt->execute();
-
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
-
 
 
 
