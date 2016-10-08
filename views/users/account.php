@@ -87,7 +87,7 @@
                                     <?php foreach($adsToDisplay as $adArray): ?>
                                     <tr>
                                         <th><?=$adArray['name'];?></th>
-                                        <td><?=$adArray['price'];?></td>
+                                        <td>$<?=$adArray['price'];?></td>
                                         <td><?=$adArray['date_created'];?></td>
                                         <td><?=$adArray['ad_views'];?></td>
                                         <td><a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
