@@ -3,10 +3,10 @@
 class Input
 {
 
-    /**
-     * @param $key as a string
-     * @return boolean
-     */
+    // *
+    //  * @param $key as a string
+    //  * @return boolean
+     
     public static function has($key)
     {
         if(isset($_REQUEST[$key])) {
@@ -16,9 +16,9 @@ class Input
         }
     }
 
-    /**
-     * @return value at $_SESSION[$key] if set, else return null
-     */
+    // *
+    //  * @return value at $_SESSION[$key] if set, else return null
+     
     public static function get($key, $default = null)
     {
         if(isset($_REQUEST[$key])) {
@@ -35,12 +35,12 @@ class Input
     }
 
 
-    /**
-     * Check if a value is numeric
-     *
-     * @param string $key index to look for in index
-     * @return bool value passed in request
-     */
+    // *
+    //  * Check if a value is numeric
+    //  *
+    //  * @param string $key index to look for in index
+    //  * @return bool value passed in request
+     
     public static function checkNumeric($key)
     {
         return is_numeric(trim(static::get($key)));
