@@ -46,7 +46,7 @@
                             <ul class="nav nav-pills nav-stacked">
                                 <li>
                                     <?php if($user->id == Auth::id()) : ?>
-                                    <a href="/users/edit?id=<?= $user->id; ?>"><i class="fa fa-user"></i>  Edit Profile</a>
+                                    <a href="/users/edit"><i class="fa fa-user"></i>  Edit Profile</a>
                                 </li>
                                  <?php endif; ?>
                 
@@ -87,7 +87,7 @@
                                     <?php foreach($adsToDisplay->attributes as $ad): ?>
                                     <tr>
                                         <th><?=$ad['name'];?></th>
-                                        <td><?=$ad['price'];?></td>
+                                        <td>$ <?=$ad['price'];?></td>
                                         <td><?=$ad['date_created'];?></td>
                                         <td><?=$ad['ad_views'];?></td>
                                         <td><a href="/ads/show?id=<?=$ad['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
