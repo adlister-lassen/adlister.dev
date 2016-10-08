@@ -59,9 +59,10 @@ function pageController($dbc)
         case '/users/edit':
             include __DIR__.'/../controllers/EditUserController.php';
             break;
-//DEBUG ONLY
-        case '/test':
-            include __DIR__.'/../controllers/testController.php';
+        case '/logout':
+            include __DIR__.'/../controllers/LogoutController.php';
+            $_SESSION['IS_LOGGED_IN'] = null;
+            $_SESSION['LOGGED_IN_ID'] = null;
             break;
 
         default:    // displays 404 if route not specified above
