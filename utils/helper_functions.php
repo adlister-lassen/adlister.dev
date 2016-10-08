@@ -282,8 +282,7 @@ function createAdOrRedirect()
 
 function findUserOrRedirect()
 {
-    $user = User::find($_SESSION['LOGGED_IN_ID']);
-    if ($user == null) {
+    if (! Auth::check()) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         die();
     }
