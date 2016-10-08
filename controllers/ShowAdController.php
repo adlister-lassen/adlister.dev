@@ -1,8 +1,7 @@
 <?php
+//needs authorization for editing
 
-$adId = Input::get('id');
-$ad = Ad::find($adId);
-$sellerId = $ad->user_id;
-$data['seller'] = User::find($sellerId);
+$ad = Ad::find(Input::get('id'));
+$data['seller'] = User::find($ad->user_id);
 $data['ad'] = findAdOrRedirect();
 $main_view = __DIR__.'/../views/ads/show.php';

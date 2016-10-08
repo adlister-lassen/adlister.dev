@@ -59,6 +59,11 @@ function pageController($dbc)
         case '/users/edit':
             include __DIR__.'/../controllers/EditUserController.php';
             break;
+//DEBUG ONLY
+        case '/test':
+            include __DIR__.'/../controllers/testController.php';
+            break;
+
         default:    // displays 404 if route not specified above
             $main_view = __DIR__.'/../views/404.php';
             break;
@@ -72,4 +77,5 @@ function pageController($dbc)
 }
 var_dump($_SESSION['IS_LOGGED_IN']);
 var_dump($_SESSION['LOGGED_IN_ID']);
+
 extract(pageController($dbc));

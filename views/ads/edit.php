@@ -34,7 +34,7 @@
                         <!-- /.col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="box">
-                                <form method="POST" action="/ads/edit?id=<?= $ad->id ?>&submitted=true" id="createAd" data-validation data-required-message="This field is required">
+                                <form method="POST" action="/ads/edit?id=<?= $ad->id ?>" data-validation data-required-message="This field is required">
                                     <div class="sizes">
                                         <h3>Product Information</h3>
                                     </div>
@@ -50,23 +50,25 @@
                                     <div class="form-group">
                                         <input value="<?= $ad->image_url ?>" type="text" class="form-control" id="image_url" name="image_url" placeholder="Filepath/imagename.png" data-required>
                                     </div>
-                                    <div class="sizes">
+                                        <div class="sizes">
                                         <!-- ========== PULL AND POPULATE LOGGED IN USERNAME  ========== -->
-                                        <h3>Sold by <?=$_SESSION['IS_LOGGED_IN']?></h3>
-                                    </div>
-
-                            </div>
+                                            <h3>Sold by <?=$_SESSION['IS_LOGGED_IN']?></h3>
+                                        </div>
                             <!-- /.box -->
+                            </div>
+                            
                                     <div class="col-sm-6">
                                          <button type="submit" class="btn btn-template-main"><i class="fa fa-floppy-o"></i>  Save This Ad</button>
-                                    </div> </form>
+                                    </div> 
+                                </form>
 
                                     <div class="col-sm-6 text-right">
                                         <a type="button" href="/users/account" class="btn"><i class="fa fa-ban"></i>  Cancel</a>
                                     </div>
-                        </div>
-                        <!-- /.col-sm-6 -->
+
                     </div>
+                        <!-- /.col-sm-6 -->
+                </div>
                     <div class="box" id="tagline">
                         <blockquote>
                             <p><em>Be sure to include all necessary details buyers will be interested in.</em>

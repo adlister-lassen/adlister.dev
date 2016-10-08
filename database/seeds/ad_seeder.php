@@ -74,7 +74,7 @@ $ad->user_id      = 6;
 $ad->name         = 'Bacon Toothpaste';
 $ad->description  = "Great gag/novelty gift.
 Each tube contains 2.5 oz (70 g) of potent BACON paste.";
-$ad->price        = 5.00;
+$ad->price        = 5.01;
 $ad->image_url    = '/img/uploads/bacon-flavored-toothpaste.png';
 $ad->date_created = 2016-06-05;
 $ad->ad_views     = 34;
@@ -126,6 +126,7 @@ Be careful though, the delicious frosting flavor might turn you into a flossahol
 Each 2 1/2-inches tall plastic dispenser contains 27.3 yards (982.8 inches) of waxed floss.";
 $ad->price        = 3.75;
 $ad->image_url    = '/img/uploads/cupcake-floww.png';
+
 $ad->date_created = 2016-05-29;
 $ad->ad_views     = 13;
 $ad->save();
@@ -140,6 +141,7 @@ that warms our bread every morning, the Defibrillator Toaster.";
 $ad->price        = 19.99;
 $ad->image_url    = '/img/uploads/toaster.png';
 $ad->date_created = 2016-06-27;
+
 $ad->ad_views     = 46;
 $ad->save();
 
@@ -153,9 +155,11 @@ Liner with detail stitching and contrasting ventilated panels in the top
 Embossed goggle strap
 Vintage style chrome strip
 Helmets are non-DOT approved and meant for novelty purposes only";
-$ad->price        = 75.00;
+$ad->price        = 75.01;
 $ad->image_url    = '/img/uploads/disco-ball-helmet.png';
+
 $ad->date_created = 2016-03-01;
+
 $ad->ad_views     = 27;
 $ad->save();
 
@@ -171,7 +175,9 @@ Stash your tash for emergency situations
 Set of 6 self adhesive mustaches in assorted styles";
 $ad->price        = 8.15;
 $ad->image_url    = '/img/uploads/moustaches.png';
+
 $ad->date_created = 2016-03-03;
+
 $ad->ad_views     = 31;
 $ad->save();
 
@@ -186,6 +192,7 @@ well beyond the width of the pet, preventing it from slipping out between fence 
 $ad->price        = 29.95;
 $ad->image_url    = '/img/uploads/dog-harness.png';
 $ad->date_created = 2016-03-09;
+
 $ad->ad_views     = 44;
 $ad->save();
 
@@ -201,7 +208,9 @@ Water resistant
 Measures 70 inches by 70 incehs";
 $ad->price        = 13.99;
 $ad->image_url    = '/img/uploads/facebook-shower-curtain.png';
+
 $ad->date_created = 2016-03-13;
+
 $ad->ad_views     = 7;
 $ad->save();
 
@@ -244,7 +253,7 @@ $ad->name         = 'iPhone Case With Built-In Cup Holder';
 $ad->description  = "The Uppercup aims to be one of the first cup holders for the iPhone.
 A creation from Natwerk it is called the Uppercup.
 It is an iPhone case with a built-in cup holder to hold your beverage.";
-$ad->price        = 11.00;
+$ad->price        = 11.01;
 $ad->image_url    = '/img/uploads/iphone-cupholder.png';
 $ad->date_created = 2016-04-08;
 $ad->ad_views     = 17;
@@ -272,7 +281,7 @@ $ad->user_id      = 6;
 $ad->name         = 'The Lobster iPhone Case';
 $ad->description  = "The Red Lobster Mobile Telephone Case is a modern appropriation of Salvador
 Dali’s Lobster Telephone (Aphrodisiac telephone), created in 1938.";
-$ad->price        = 20.00;
+$ad->price        = 20.01;
 $ad->image_url    = '/img/uploads/lobster-case.png';
 $ad->date_created = 2016-05-10;
 $ad->ad_views     = 32;
@@ -288,7 +297,9 @@ The Automated Noddle Cooler is the answer.
 A compact fan, it fits tidily towards the holding end of one of a pair of chopsticks.";
 $ad->price        = 10.50;
 $ad->image_url    = '/img/uploads/noodle-cooling-fan.png';
+
 $ad->date_created = 2016-05-25;
+
 $ad->ad_views     = 11;
 $ad->save();
 
@@ -328,7 +339,9 @@ $ad->description  = "Innovative pants designed by Italian company transform into
 useful picnic table when a person sits in a cross-legged position.";
 $ad->price        = 44.99;
 $ad->image_url    = '/img/uploads/picnic-pants.png';
+
 $ad->date_created = 2016-06-26;
+
 $ad->ad_views     = 16;
 $ad->save();
 
@@ -342,7 +355,7 @@ This Umbrella Shoe Saver invention will extend the life of your
 expensive footwear by attaching little umbrellas to your feet.";
 $ad->price        = 8.97;
 $ad->image_url    = '/img/uploads/shoe-umbrellas.png';
-$ad->date_created = 7 / 7 / 2016;
+$ad->date_created = '2016-07-07';
 $ad->ad_views     = 3;
 $ad->save();
 
@@ -355,7 +368,9 @@ $ad->description  = "Twirling is a better way to eat spaghetti and the motorized
 automatically winds up the pasta on the end of the fork.";
 $ad->price        = 11.97;
 $ad->image_url    = '/img/uploads/spaghetti-fork.png';
+
 $ad->date_created = 2016-07-17;
+
 $ad->ad_views     = 25;
 $ad->save();
 
@@ -366,9 +381,11 @@ $ad->user_id      = 2;
 $ad->name         = 'The Wizard of Oz Bookmark';
 $ad->description  = "Clever and striking. The Wicked Witch’s poor sister’s legs stick out from the
 book, perfectly marking your page. That’s right: your book is Dorothy’s house.";
-$ad->price        = 10.00;
+$ad->price        = 10.01;
 $ad->image_url    = '/img/uploads/wizard-bookmark.png';
-$ad->date_created = 2016-07-27;
+
+$ad->date_created = '7 / 27 / 2016';
+
 $ad->ad_views     = 19;
 $ad->save();
 

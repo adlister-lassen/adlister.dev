@@ -42,7 +42,7 @@ $_SESSION['LOGGED_IN_ID'];
                         <!-- /.col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="box">
-                                <form method="POST" action="/ads/create?submitted=true" id="createAd" data-validation data-required-message="This field is required">
+                                <form method="POST" action="/ads/create" id="createAd" data-validation data-required-message="This field is required">
                                     <div class="sizes">
                                         <h3>Product Information</h3>
                                     </div>
@@ -66,13 +66,12 @@ $_SESSION['LOGGED_IN_ID'];
                             <!-- /.box -->
                                     <div class="col-sm-6">
                                          <button type="submit" class="btn btn-template-main"><i class="fa fa-floppy-o"></i>  Save This Ad</button>
-                                    </div> </form>
+                                    </div> 
+                                </form>
 
                                     <div class="col-sm-6 text-right">
                                         <a type="button" href="/users/account" class="btn"><i class="fa fa-ban"></i>  Cancel</a>
                                     </div>
-
-
 
                         </div>
                         <!-- /.col-sm-6 -->
