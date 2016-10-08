@@ -270,6 +270,15 @@ function editAdOrRedirect()
     return $ad;
 }
 
+function createAdOrRedirect()
+{
+    if (! Auth::check()) {
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        die();
+    }
+    
+}
+
 
 function findUserOrRedirect()
 {
@@ -281,6 +290,7 @@ function findUserOrRedirect()
 
     return $user;
 }
+
 
 
 
