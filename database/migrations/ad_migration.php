@@ -12,7 +12,7 @@ $query = 'CREATE TABLE ads (
     description VARCHAR(1000) NOT NULL,
     price VARCHAR(100) NOT NULL,
     image_url VARCHAR(255) NOT NULL,
-    date_created VARCHAR(255) NOT NULL,
+    date_created DATE NOT NULL,
     ad_views INT UNSIGNED DEFAULT 0,
     PRIMARY KEY (id)
 )';
