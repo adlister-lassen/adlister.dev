@@ -44,20 +44,17 @@
                         </div>
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <?php if($user->id == Auth::id()) : ?>
-                                    <a href="/users/edit"><i class="fa fa-user"></i>  Edit Profile</a>
-                                </li>
-                                 <?php endif; ?>
-                
-
-
-                                <li>
-                                    <a href="/ads/create?id=<?=$user->id?>"><i class="fa fa-plus"></i>  Create New Ad</a>
-                                </li>
-                                <li>
-                                    <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
-                                </li>
+                                <?php if($user->id == Auth::id()) : ?>
+                                    <li>
+                                        <a href="/users/edit"><i class="fa fa-user"></i>  Edit Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ads/create?id=<?=$user->id?>"><i class="fa fa-plus"></i>  Create New Ad</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout"><i class="fa fa-sign-out"></i>  Logout</a>
+                                    </li>
+                                <?php endif; ?>
                             </ul>
 
                         </div>

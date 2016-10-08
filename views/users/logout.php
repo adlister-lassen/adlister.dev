@@ -1,12 +1,12 @@
 <?php
 
-session_start();
-
-session_unset();
-
-session_destroy();
-
-header("Location: /");
-exit();
+if (Auth::check()){
+    Auth::logout();
+    header('Location: /');
+    die;
+} else{
+    header('Location: /ads');
+    die;
+}
 
 ?>
