@@ -264,20 +264,9 @@ function findAdOrRedirect()
 
 function findUserOrRedirect()
 {
-    $user = User::find(Input::get('id'));
+    $user = User::find($_SESSION['LOGGED_IN_ID']);
     if ($user == null) {
-        header('Location: /');
-        die();
-    }
-
-    return $user;
-}
-
-function findLoggedInUserOrRedirect()
-{
-    $user = User::findByUsernameOrEmail($_SESSION['IS_LOGGED_IN']);
-    if ($user == null) {
-        header('Location: /ads');
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
         die();
     }
 
@@ -342,18 +331,6 @@ function getPageNumber($max_page_number)
 
     return $page_number;
 }
-
-function getAdsBySeller($dbc)
-{
-
-    $query = 'SELECT a.id, a.name, a.price, a.date_created, a.ad_views FROM ads AS a JOIN users AS u ON u.id = a.user_id WHERE u.id = '.$_SESSION['LOGGED_IN_ID'];
-
-    $stmt = $dbc->prepare($query);
-    $stmt->execute();
-
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
-
 
 
 
