@@ -1,3 +1,4 @@
 <?php
-
-$main_view = __DIR__.'/../views/ads/show?id='.$id;
+$data['ad'] = editAdOrRedirect();
+createOrEditAd();
+$main_view = __DIR__.'/../views/ads/edit.php';
