@@ -29,6 +29,7 @@ function pageController($dbc)
     // switch that will run functions and setup variables dependent on what route was accessed
     switch ($request) {
         case '/':
+            $data['adsToDisplay'] = getFeaturedAds($dbc);
             $main_view = __DIR__.'/../views/home.php';
             break;
 

@@ -79,63 +79,27 @@
                             <h2>Featured Top Sellers</h2>
                         </div>
                         <div class="row portfolio">
-                            <div class="col-sm-4">
-                                <div class="box-image">
-                                    <div class="image">
-                                        <img src="img/uploads/bacon-bandage.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="name">
-                                        <h3><a href="portfolio-detail.html">Bacon Bandages</a></h3>
-                                    </div>
-                                    <div class="text">
-                                        
-                                        <p class="buttons">
-                                            <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
+                            <?php foreach($adsToDisplay as $adArray): ?>
+                                <div class="col-sm-4">
+                                    <div class="box-image">
+                                        <div class="image">
+                                            <img src="<?=$adArray['image_url'];?>" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="bg"></div>
+                                        <div class="name">
+                                            <h3><a href="/ads/show?id=<?=$adArray['id'];?>"><?=$adArray['name'];?></a></h3>
+                                        </div>
+                                        <div class="text">
                                             
-                                        </p>
+                                            <p class="buttons">
+                                                <a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-template-transparent-primary">View</a>
+                                                
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
                                 <!-- /.item -->
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="box-image">
-                                    <div class="image">
-                                        <img src="img/uploads/pet-sweep.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="name">
-                                        <h3><a href="portfolio-detail.html">Pet Sweep</a></h3>
-                                    </div>
-                                    <div class="text">
-                                        
-                                        <p class="buttons">
-                                            <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                            
-                                        </p>
-                                    </div>
                                 </div>
-                                <!-- /.item -->
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="box-image">
-                                    <div class="image">
-                                        <img src="img/uploads/keyboard-waffle.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="name">
-                                        <h3><a href="portfolio-detail.html">Keyboard Waffle Iron</a></h3>
-                                    </div>
-                                    <div class="text">
-                                        
-                                        <p class="buttons">
-                                            <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                            
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- /.item -->
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                         <div class="see-more">
                             <p>Do you want to see more?</p>
