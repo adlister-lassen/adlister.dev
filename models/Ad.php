@@ -7,12 +7,6 @@ class Ad extends Model {
 	protected static $table = 'ads';
 
 
-    public static function ownsAd($id)
-    {
-        return $this->attributes['user_id'] == $id;
-    }
-
-
     // finds and returns instance of all ads by a seller
     public static function findByAdsBySeller($id)
     {
@@ -42,8 +36,6 @@ class Ad extends Model {
 
         return $instance;
     }
-
-
 
 }
 
