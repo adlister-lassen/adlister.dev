@@ -261,7 +261,7 @@ The docking area at the top of the horn is compatible with the original
 iPhone, iPhone 3G, iPhone 3GS, iPhone 4, iPhone 4S, and iPod touch.";
 $ad->price        = 22.95;
 $ad->image_url    = '/img/uploads/horn-speaker.png';
-$ad->date_created = 2016-05-05
+$ad->date_created = 2016-05-05;
 $ad->ad_views     = 26;
 $ad->save();
 
@@ -355,7 +355,7 @@ $ad->description  = "Twirling is a better way to eat spaghetti and the motorized
 automatically winds up the pasta on the end of the fork.";
 $ad->price        = 11.97;
 $ad->image_url    = '/img/uploads/spaghetti-fork.png';
-$ad->date_created = 2016-07-17
+$ad->date_created = 2016-07-17;
 $ad->ad_views     = 25;
 $ad->save();
 
