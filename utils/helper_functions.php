@@ -286,7 +286,7 @@ function findUserOrRedirect()
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         die();
     }
-
+    $user = User::find($_SESSION['LOGGED_IN_ID']);
     return $user;
 }
 
@@ -341,5 +341,20 @@ function getPageNumber($max_page_number)
     return $page_number;
 }
 
+//------------------- featured Ads
 
+function getFeaturedAds($dbc, $page_number,$limit)
+{
+
+    $ads_query = 'SELECT * FROM ads LIMIT 3 ORDER BY ad_views;';
+
+    $offset = calculateOffset($page_number, $limit);
+
+    $stmt = $dbc->prepare($ads_query);
+    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 

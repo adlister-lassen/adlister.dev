@@ -78,5 +78,4 @@ function pageController($dbc)
 }
 var_dump($_SESSION['IS_LOGGED_IN']);
 var_dump($_SESSION['LOGGED_IN_ID']);
-
 extract(pageController($dbc));
