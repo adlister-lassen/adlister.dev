@@ -86,12 +86,12 @@
                                 <tbody>
                                     <?php foreach($adsToDisplay->attributes as $ad): ?>
                                     <tr>
-                                        <th><?=$adArray['name'];?></th>
-                                        <td>$<?=$adArray['price'];?></td>
-                                        <td><?=$adArray['date_created'];?></td>
-                                        <td><?=$adArray['ad_views'];?></td>
-                                        <td><a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
-                                        <td><a href="/ads/edit?id=<?=$adArray['id'];?>" class="btn btn-template-main btn-sm">Edit</a>
+                                        <th><?=$ad['name'];?></th>
+                                        <td>$ <?=$ad['price'];?></td>
+                                        <td><?=$ad['date_created'];?></td>
+                                        <td><?=$ad['ad_views'];?></td>
+                                        <td><a href="/ads/show?id=<?=$ad['id'];?>" class="btn btn-template-main btn-sm">View</a></td>
+                                        <td><a href="/ads/edit?id=<?=$ad['id'];?>" class="btn btn-template-main btn-sm">Edit</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
