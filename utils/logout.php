@@ -1,10 +1,10 @@
 <?php
 if (Auth::check()){
     Auth::logout();
-    // header('Location: /');
+    redirect('Location: /');
     die;
 } else{
-    header('Location: /ads');
+    redirect('Location: /ads');
     die;
 }
 

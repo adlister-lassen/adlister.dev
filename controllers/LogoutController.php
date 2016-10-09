@@ -1,3 +1,10 @@
 <?php
+function logOut()
+{
 
-$main_view = __DIR__.'/../views/users/logout.php';
+    Auth::logout();
+    header('Location: /');
+    die();
+
+}
+logOut();

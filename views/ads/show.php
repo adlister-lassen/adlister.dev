@@ -58,8 +58,27 @@
                 <!-- /.row-->
 
                 <div class="box" id="tagline">
+
+                        <?php
+                                $jokes = array(
+                                "Knock, knock----Who's there?----Nobel----Nobel who?  " . str_repeat('&nbsp;', 95) . "No bell, that's why I knocked!",
+                                "Knock, knock----Who's There?----Ashe-----Ashe who?   " . str_repeat('&nbsp;', 95) . "Bless you!",
+                                "Knock, knock----Who's there?----Leaf-----Leaf who?   " . str_repeat('&nbsp;', 95) . "Leaf me alone!", 
+                                "Knock, knock----Who's There?----lettuce--lettuce who?" . str_repeat('&nbsp;', 95) . "Lettuce in and you'll find out!", 
+                                "Knock, knock----Who's there?----Aaron----Aaron who?  " . str_repeat('&nbsp;', 95) . "Why Aaron you opening the door?", 
+                                "Knock, knock----Who's There?----Tank-----Tank Who?   " . str_repeat('&nbsp;', 95) . "You're welcome!", 
+                                "Knock, knock----Who's there?----Hawaii---Hawaii who? " . str_repeat('&nbsp;', 95) . "I'm fine, Hawaii you?",
+                                "Knock, knock----Who's there?----Gray Z---Gray Z who? " . str_repeat('&nbsp;', 95) . "Gray Z mixed up kid.",
+                                "Knock, knock----Who's There?----Who------Who Who?    " . str_repeat('&nbsp;', 95) . "Is there an owl in there?", 
+                                "Knock, knock----Who's There?----Anita----Anita who?  " . str_repeat('&nbsp;', 95) . "Anita to borrow a pencil."
+                                );
+                                $arrayNo = rand(0,9);
+                        ?>
+
+
                     <blockquote>
-                        <p><em>Say something witty • revolving knock knock joke</em>
+                        <p class="lead">Here's a joke just for you!</p>
+                        <p class="text-muted lead"><em><?php echo $jokes[$arrayNo]; ?></em>
                         </p>
                     </blockquote>
                 </div>
@@ -71,9 +90,11 @@
             <!-- *** RIGHT COLUMN *** -->
 
                 <div class="col-sm-3">
+               
                     <div class="panel panel-default sidebar-menu">
+                     <?php if (Auth::check()) : ?>
                         <div class="panel-heading">
-                            <h3 class="panel-title">My Account</h3>
+                            <h3 class="panel-title" href="/users/account?id=<?= Auth::id(); ?>">My Account</h3>
                         </div>
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
@@ -89,8 +110,12 @@
                                 <li>
                                     <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
                                 </li>
-                            </ul>
+                                </ul>
+                                 <?php else : ?>
+                                
+                                
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- /.col-md-3 -->

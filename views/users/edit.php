@@ -35,10 +35,8 @@
                         <i class="fa fa-user"></i>
                     </div>
                     <h3><?=$user->name?></h3>
-                    <p>
-                        <?= $user->email; ?>
-                        <?= $user->username; ?>
-                    </p>
+                    <p class="text-muted lead">Username: <?= $user->username; ?></p>
+                    <p class="text-muted lead">Email: <?= $user->email; ?></p>
                 </div>
                 </div>
 
