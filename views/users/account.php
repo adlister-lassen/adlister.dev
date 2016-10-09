@@ -81,6 +81,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php if ($adsToDisplay!= null) : ?>
                                     <?php foreach($adsToDisplay->attributes as $ad): ?>
                                     <tr>
                                         <th><?=$ad['name'];?></th>
@@ -92,6 +93,7 @@
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
+                                <?php endif;?>
                                 </tbody>
                             </table>
                         </div>
