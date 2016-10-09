@@ -2234,6 +2234,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .product {
   background: #fff;
+  height: 720px;
   border-bottom: solid 1px #e6e6e6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2241,6 +2242,7 @@ fieldset[disabled] .btn-template-primary.active {
   margin-bottom: 60px;
   overflow: hidden;
   text-align: center;
+  align-content: center;
 }
 .product .image {
   overflow: hidden;
