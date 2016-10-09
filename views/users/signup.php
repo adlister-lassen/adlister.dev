@@ -1,5 +1,3 @@
-<div>
-
     <section id="signup">
 
         <div class="row">
@@ -30,27 +28,22 @@
                         </center>
                     </div>
 
-
-
-                    <?php if (isset($_SESSION[ 'ERROR_MESSAGE'])) : ?>
+                    
+                    <?php if (isset($_SESSION['ERROR_MESSAGE'])) : ?>
+                    
                     <div class="alert alert-danger">
-                        <p class="error">
-
-                            <?=$_SESSION[ 'ERROR_MESSAGE']; ?>
-
-                        </p>
+                        <p class="error"><?=$_SESSION['ERROR_MESSAGE']; ?></p>
                     </div>
-                    <?php unset($_SESSION[ 'ERROR_MESSAGE']); ?>
+                    
+                    <?php unset($_SESSION['ERROR_MESSAGE']); ?>
                     <?php endif; ?>
-                    <?php if (isset($_SESSION[ 'SUCCESS_MESSAGE'])) : ?>
+                    <?php if (isset($_SESSION['SUCCESS_MESSAGE'])) : ?>
+                    
                     <div class="alert alert-success">
-                        <p class="success">
-
-                            <?=$_SESSION[ 'SUCCESS_MESSAGE']; ?>
-                            
-                        </p>
+                        <p class="success"><?=$_SESSION['SUCCESS_MESSAGE']; ?></p>
                     </div>
-                    <?php unset($_SESSION[ 'SUCCESS_MESSAGE']); ?>
+                    
+                    <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
                     <?php endif; ?>
 
                    
@@ -58,33 +51,27 @@
                    <form method="POST" action="/signup?submitted=true" data-validation data-required-message="This field is required">
 
                         <div class="form-group">
-                            <input value="<?= Input::get('name') ?>" type="text" class="form-control" id="name-login" name="name" placeholder="Full Name" data-required>
+                            <input value="<?= Input::get('name') ?>" type="text" class="form-control" id="name" name="name" placeholder="Full Name" data-required>
                         </div>
                         <div class="form-group">
-                            <input value="<?= Input::get('email') ?>" type="text" class="form-control" id="email-login" name="email" placeholder="Email" data-required>
+                            <input value="<?= Input::get('email') ?>" type="text" class="form-control" id="email" name="email" placeholder="Email" data-required>
                         </div>
                         <div class="form-group">
-                            <input value="<?= Input::get('username') ?>" type="text" class="form-control" id="username-login" name="username" placeholder="Username" data-required>
+                            <input value="<?= Input::get('username') ?>" type="text" class="form-control" id="username" name="username" placeholder="Username" data-required>
                         </div>
                         <div class="form-group">
-                            <input value="<?= Input::get('password') ?>" type="password" class="form-control" id="password-login" name="password" placeholder="Password" data-required>
+                            <input value="<?= Input::get('password') ?>" type="password" class="form-control" id="password" name="password" placeholder="Password" data-required>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
-                                <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Signup</button>
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <a type="button" href="/login" class="btn"><i class="fa fa-sign-in"></i>Go To Login</a>
-                            </div>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Signup</button>
+                        </div>
+                    </form>
+                        <div class="col-sm-6 text-right">
+                            <a type="button" href="/login" class="btn"><i class="fa fa-sign-in"></i>Go To Login</a>
+                        </div>
+                        </div>
                         </div>
 
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
 
     </section>
-
-</div>
