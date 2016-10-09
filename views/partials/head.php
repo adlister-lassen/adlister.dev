@@ -25,7 +25,7 @@
 <![endif]-->
 
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/gaglister-favicon.ico"/>
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
