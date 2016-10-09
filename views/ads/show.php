@@ -71,9 +71,11 @@
             <!-- *** RIGHT COLUMN *** -->
 
                 <div class="col-sm-3">
+               
                     <div class="panel panel-default sidebar-menu">
+                     <?php if (Auth::check()) : ?>
                         <div class="panel-heading">
-                            <h3 class="panel-title">My Account</h3>
+                            <h3 class="panel-title" href="/users/account?id=<?= Auth::id(); ?>">My Account</h3>
                         </div>
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
@@ -89,8 +91,12 @@
                                 <li>
                                     <a href="/"><i class="fa fa-sign-out"></i>  Logout</a>
                                 </li>
-                            </ul>
+                                </ul>
+                                 <?php else : ?>
+                                
+                                
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- /.col-md-3 -->
