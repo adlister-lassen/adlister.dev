@@ -27,18 +27,18 @@
 
             <div class="row products">
                 <?php foreach($adsToDisplay as $adArray): ?>
-                    <div class="col-md-4   col-sm-4" >
+                    <div class='col-md-4'>
                         <div class="product">
-                            <div class="image">
+                            <div class="row image">
                                 <a href="/ads/show?id=<?=$adArray['id'];?>">
                                     <img src="<?=$adArray['image_url'];?>" alt="" class="img-responsive image1">
                                 </a>
                             </div>
                             <!-- /.image -->
-                            <div class="text">
+                            <div class="text row">
                                 <h3><a href="/ads/show?id=<?=$adArray['id'];?>"</a><?=$adArray['name'];?></h3>
                                 <p class="price">$<?=$adArray['price'];?></p>
-                                <p class="buttons">
+                                <p>
                                     <a href="/ads/show?id=<?=$adArray['id'];?>" class="btn btn-default">View detail</a>
                                 </p>
                             </div>
