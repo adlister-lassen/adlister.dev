@@ -786,7 +786,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #intro .container,
 #intro .row {
-  height: 100%;
+  max-height: 100%;
   position: relative;
 }
 .jumbotron {
@@ -1498,6 +1498,8 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .box-image {
   position: relative;
+  height: 300px;
+  width: 300px;
   overflow: hidden;
   text-align: center;
   margin: 15px 0;
@@ -2246,15 +2248,18 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .product .image {
   overflow: hidden;
+
 }
 .product .image img {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  height: 400px;
+  width: 400px;
 }
 @media (max-width: 767px) {
   .product .image img.img-responsive {
-    min-width: 100%;
+    /* max-width: 100%; */
   }
 }
 .product .text {
