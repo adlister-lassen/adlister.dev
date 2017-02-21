@@ -18,11 +18,8 @@
     </div>
     <div id="content">
         <div class="container">
-
             <p class="text-muted lead">User Profile</p>
-
             <div class="row">
-
                 <div class="col-md-4 box-simple box-white">
                     <div class="icon">
                         <i class="fa fa-user"></i>
@@ -30,14 +27,8 @@
                     <h3><?=$user->name?></h3>
                     <p class="text-muted lead">Username: <?= $user->username; ?></p>
                     <p class="text-muted lead">Email: <?= $user->email; ?></p>
-
                 </div>
-
-
-
                 <div class="col-md-2 col-md-offset-5">
-
-
                     <div class="panel panel-default sidebar-menu">
                         <div class="panel-heading">
                             <h3 class="panel-title">My Account</h3>
@@ -56,13 +47,10 @@
                                     </li>
                                 <?php endif; ?>
                             </ul>
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
             <p class="text-muted lead">My Ads</p>
             <div class="row">
                 <div class="col-md-9" id="customer-orders">
@@ -96,8 +84,7 @@
                                 <?php endif;?>
                                 </tbody>
                             </table>
-                        </div>
-                        
+                        </div> 
                         <!-- /.table-responsive -->
                     </div>
                     <!-- /.box -->
@@ -105,5 +92,4 @@
             </div>
         </div>
     </div>
-
 </section>

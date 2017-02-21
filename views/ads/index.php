@@ -31,7 +31,7 @@
                         <div class="product">
                             <div class="row image">
                                 <a href="/ads/show?id=<?=$adArray['id'];?>">
-                                    <img src="<?=$adArray['image_url'];?>" alt="" class="img-responsive image1">
+                                    <img src="<?=$adArray['image_url'];?>" alt="" class="img-responsive image">
                                 </a>
                             </div>
                             <!-- /.image -->
